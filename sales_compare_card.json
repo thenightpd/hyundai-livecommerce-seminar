@@ -1,0 +1,56 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "📊 08:15 방송 비교 (8/25 vs 8/26)",
+            "weight": "Bolder",
+            "size": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "매출속보(AF170) 기준",
+            "isSubtle": true,
+            "spacing": "None"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              { "title": "어제(8/25 화)", "value": "M - 이상봉에디션(패션Lab)" },
+              { "title": "목표", "value": "331,434천원" },
+              { "title": "예상 실적", "value": "166,796천원 (달성률 50.3%)" },
+              { "title": "생방송 매출", "value": "162,211천원 (달성률 48.9%)" }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "---",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              { "title": "오늘(8/26 수)", "value": "아소야 (플레이백/머티리얼랩스/어반아라운드)" },
+              { "title": "목표", "value": "781,322천원" },
+              { "title": "예상 실적", "value": "522,560천원 (달성률 66.9%)" },
+              { "title": "생방송 매출", "value": "492,694천원 (달성률 63.1%)" }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "정리: 오늘 방송이 목표 규모(약 2.4배)·매출(약 3배)·달성률(66.9% vs 50.3%) 모두 어제보다 우세했습니다.",
+            "wrap": true,
+            "spacing": "Medium"
+          }
+        ]
+      }
+    }
+  ]
+}
