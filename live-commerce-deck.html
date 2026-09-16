@@ -173,39 +173,6 @@ body{
   padding:8px 18px;border-radius:100px;font-weight:700;
 }
 
-/* ---- timer slide ---- */
-.timer-label{
-  font-family:var(--font-label);font-size:clamp(15px,1.8vw,20px);
-  letter-spacing:.03em;color:var(--gold);font-weight:700;margin-bottom:20px;
-}
-.timer-ring-wrap{position:relative;width:min(46vh,420px);height:min(46vh,420px);margin-bottom:26px;}
-.timer-ring-wrap svg{width:100%;height:100%;transform:rotate(-90deg);}
-.timer-ring-wrap .track{fill:none;stroke:var(--ring-track);stroke-width:5;}
-.timer-ring-wrap .bar{fill:none;stroke:var(--accent);stroke-width:5;stroke-linecap:round;transition:stroke .3s;}
-.timer-ring-wrap.done .bar{stroke:var(--danger);}
-.timer-display{
-  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-family:'JetBrains Mono',monospace;font-weight:700;
-  font-size:clamp(48px,9vw,110px);letter-spacing:-.02em;
-  font-variant-numeric:tabular-nums;
-}
-.timer-ring-wrap.done .timer-display{color:var(--danger);animation:pulse 1s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.45;}}
-.timer-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center;margin-bottom:18px;}
-.tbtn{
-  font-family:var(--font-body);font-weight:700;font-size:15px;
-  background:var(--accent);color:#1a0d05;border:none;border-radius:10px;
-  padding:12px 26px;cursor:pointer;
-}
-.tbtn.secondary{background:var(--panel-2);color:var(--ink-soft);border:1px solid var(--line);}
-.tbtn:hover{filter:brightness(1.08);}
-.presets{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
-.preset{
-  font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ink-faint);
-  background:none;border:1px solid var(--line);border-radius:100px;padding:6px 14px;cursor:pointer;
-}
-.preset:hover{border-color:var(--gold);color:var(--gold);}
-
 /* ---- bridge slide ---- */
 .bridge-eyebrow{font-family:var(--font-label);font-weight:700;letter-spacing:.06em;color:var(--ink-faint);font-size:clamp(14px,1.6vw,18px);text-transform:uppercase;margin-bottom:18px;}
 .bridge-num{font-weight:900;color:var(--accent);font-size:clamp(15px,1.7vw,19px);font-family:var(--font-label);margin-bottom:8px;}
@@ -271,6 +238,20 @@ body{
 .rcard ul{margin:0 0 10px;padding-left:1.1em;font-size:14.5px;color:var(--ink-soft);line-height:1.55;}
 .rcard li{margin-bottom:6px;}
 .rcard .rc-warn{font-size:13.5px;font-weight:700;color:var(--accent);border-top:1px dashed var(--line);padding-top:8px;}
+
+/* ---- prompt template (4교시 AI 실습) ---- */
+.prompt-title{font-weight:900;font-size:clamp(20px,2.8vw,30px);margin-bottom:6px;}
+.prompt-sub{color:var(--ink-faint);font-size:clamp(13px,1.5vw,16px);margin-bottom:20px;}
+.prompt-box{
+  background:var(--panel);border:1.5px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:20px 24px;text-align:left;
+  width:min(860px,92vw);max-height:60vh;overflow:auto;
+  font-family:'JetBrains Mono','Pretendard Variable',monospace;
+  font-size:clamp(12.5px,1.45vw,16.5px);line-height:1.8;color:var(--ink-soft);
+  white-space:pre-wrap;word-break:keep-all;
+}
+.prompt-box .ph{color:var(--gold);font-weight:700;}
+.prompt-box .key{color:var(--accent);font-weight:700;}
 
 /* ---- closing feature ---- */
 .closing{
@@ -366,7 +347,7 @@ body{
           <li><b>온라인 마케팅 (2년)</b> — 광고 운영, 데이터 기반 캠페인 기획</li>
           <li><b>쇼핑라이브 편성·기획 (2년)</b> — 라이브 방송 편성과 콘텐츠 기획</li>
           <li><b>온라인 영업관리 (2년)</b> — 파트너사 정산·협상, 매출 관리</li>
-          <li><b>e커머스 제휴 (3년차)</b> — 신사업 제휴, 채널 확장</li>
+          <li><b>e커머스 제휴 (4년차)</b> — 신사업 제휴, 채널 확장</li>
         </ul>
       </div>
     </div>
@@ -569,12 +550,12 @@ body{
     <ul class="axis-bullets">
       <li>말이 길어진다는 건 핵심을 모른다는 뜻이기도 하다</li>
     </ul>
-    <div class="axis-quote">20초만 들어도<br>무슨 말인지 알게 해야 합니다</div>
+    <div class="axis-quote">30초만 들어도<br>무슨 말인지 알게 해야 합니다</div>
   </section>
 
-  <!-- 1f : 20초 답변 구조 -->
+  <!-- 1f : 30초 답변 구조 -->
   <section class="slide" data-period="2">
-    <div class="steps3-title">20초 답변의 구조</div>
+    <div class="steps3-title">30초 답변의 구조</div>
     <div class="steps3">
       <div class="step3-card"><div class="s3-num">STEP 1</div><h4>결론</h4><p>먼저 결론부터 말한다</p></div>
       <div class="step3-card"><div class="s3-num">STEP 2</div><h4>이유</h4><p>그렇게 생각하는 핵심 이유</p></div>
@@ -667,6 +648,7 @@ body{
   <section class="slide" data-idx="7" data-period="2">
     <div class="mission-title">30초 배틀</div>
     <div class="mission-sub">진짜 30초 되면 칼같이 끊깁니다</div>
+    <div class="source-note" style="margin-bottom:18px;">조에서 <b>폰 스톱워치 켤 사람 1명</b> 먼저 정하세요 — 30초에 "컷"</div>
     <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
       <li>구조 — 결론 → 이유 → 근거</li>
       <li>주제 — 아래 5개 중 하나를 골라서</li>
@@ -687,8 +669,6 @@ body{
     <div class="mission-sub" style="margin-top:26px;">이 중 <span class="hl" style="color:var(--accent);font-weight:700;">하나만 골라서</span> 30초 안에 말해보세요</div>
   </section>
 
-  <!-- 9 : timer 생각하기 -->
-  <!-- 10 : timer 30초 배틀 -->
   <!-- 11 : 챔피언 -->
   <section class="slide" data-idx="10" data-period="2">
     <div class="kw-eyebrow">마무리</div>
@@ -776,15 +756,15 @@ body{
   <section class="slide" data-period="3">
     <div class="tslide-title">후킹 → CTA, 숏폼 콘텐츠의 구조</div>
     <table class="tslide-table">
-      <thead><tr><th>구간</th><th>목적</th><th>AARRR과 비교하면</th></tr></thead>
+      <thead><tr><th>구간</th><th>목적</th><th>실패하면 잃는 숫자</th></tr></thead>
       <tbody>
-        <tr><td>0–3초 후킹</td><td>스크롤을 멈추게 하기</td><td>Acquisition</td></tr>
-        <tr><td>3–10초 공감·전개</td><td>내 얘기라고 느끼게 하기</td><td>Activation</td></tr>
-        <tr><td>10–20초 가치 제공</td><td>정보·재미·혜택 전달</td><td class="hi">Revenue로 연결</td></tr>
-        <tr><td>20–25초 신뢰 강화</td><td>후기·데이터·비교로 설득</td><td>Retention 만드는 구간</td></tr>
-        <tr><td>25–30초 CTA</td><td>지금 행동하게 만들기</td><td>Referral까지 연결</td></tr>
+        <tr><td>0–5초 후킹</td><td>스크롤을 멈추게 하기</td><td class="hi">3초 이탈률</td></tr>
+        <tr><td>5–15초 공감</td><td>내 얘기라고 느끼게 하기</td><td>평균 시청시간</td></tr>
+        <tr><td>15–25초 장점 1개 · 시연</td><td>후기·데이터·비교로 설득</td><td>전환율</td></tr>
+        <tr><td>25–30초 CTA</td><td>지금 행동하게 만들기</td><td>구매 전환</td></tr>
       </tbody>
     </table>
+    <div class="source-note">이 4칸이 오늘의 뼈대입니다. 4교시엔 30초로, 오후엔 60초로 늘려서 그대로 씁니다</div>
   </section>
 
   <section class="slide" data-period="3">
@@ -803,16 +783,27 @@ body{
   </section>
 
   <section class="slide" data-period="3">
+    <div class="kw-eyebrow">왜 첫 3초인가</div>
+    <div class="stat-row">
+      <div class="stat-box"><span class="num">3.75초</span><span class="lbl">틱톡 평균 시청시간</span></div>
+      <div class="stat-arrow">·</div>
+      <div class="stat-box"><span class="num">71%</span><span class="lbl">몇 초 안에 이탈 결정</span></div>
+    </div>
+    <div class="source-note">Kapwing, 2026 — 오후에 큐시트 쓸 때 0~5초에 제일 오래 붙잡으세요</div>
+  </section>
+
+  <section class="slide" data-period="3">
     <div class="kw-eyebrow">실습</div>
     <div class="kw-text">유입 <span class="hl">×</span> 전환율 <span class="hl">×</span> 객단가</div>
     <div class="mission-sub" style="margin-top:16px;">정답이 아니라 — 왜 그 숫자를 가정했는지가 중요합니다</div>
     <table class="tslide-table" style="margin-top:26px;">
       <tbody>
-        <tr><td>전환율</td><td>일반 이커머스 0.3~1%</td><td class="hi">라이브커머스 3~8%</td></tr>
+        <tr><td>전환율</td><td>일반 이커머스 0.3~1%</td><td class="hi">라이브커머스 3~8%*</td></tr>
         <tr><td>플랫폼 수수료</td><td>온라인쇼핑몰 약 10%</td><td class="hi">TV홈쇼핑 약 27.7%</td></tr>
         <tr><td>원가율</td><td colspan="2">40~60% (현장 감각 수준)</td></tr>
       </tbody>
     </table>
+    <div class="source-note">* 업계에서 통용되는 감각치 (출처 혼재) · 수수료율은 공정위 실질판매수수료율 기준</div>
   </section>
 
   <!-- 예제 1 : 청바지 -->
@@ -859,6 +850,28 @@ body{
     </ol>
   </section>
 
+  <!-- 예제 3 : 직접 계산 (짝 실습) -->
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">예제 3 · 이번엔 직접 · 15분</div>
+    <div class="kw-text">앞에 띄운 <span class="hl">이 상품</span>으로<br>라이브 한 번 하면 얼마가 남나?</div>
+    <div class="mission-sub" style="margin-top:20px;">2인 1조 · 계산기 켜도 됩니다 · 한 칸이라도 비우면 못 하는 방송입니다</div>
+    <div class="source-note">"전환율 몇 % 잡을래?" — 이건 꼭 <b>소리 내서</b> 상의하세요</div>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="tslide-title">계산 시트 · 3단계</div>
+    <table class="tslide-table">
+      <thead><tr><th>단계</th><th>계산</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">1. 매출 만들기</td><td>유입 × 전환율 = 구매자 수 → × 객단가 = <b>총매출</b></td></tr>
+        <tr><td class="hi">2. 돈 빼기</td><td>상품 원가 · 판매수수료 · 광고비 · 기타(출연료·제작비·배송비)</td></tr>
+        <tr><td class="hi">3. 결과</td><td>영업이익 = 총매출 − 위 4개 &nbsp;/&nbsp; 이익률 = 영업이익 ÷ 총매출</td></tr>
+        <tr><td>+ 만약에</td><td>전환율 2배 / 유입 2배 / 원가 10%↓ — <b>하나만</b> 골라 다시 계산</td></tr>
+      </tbody>
+    </table>
+    <div class="source-note">전환율 옆에는 <b>"왜 이렇게 잡았나"</b>를 반드시 한 줄 적습니다</div>
+  </section>
+
   <section class="slide" data-period="3">
     <div class="list-title">공유 — 우리가 통제 가능한 부분은?</div>
     <ul class="list-items" style="text-align:left;font-size:clamp(17px,2.1vw,24px);">
@@ -878,14 +891,28 @@ body{
         <tr><td>2. 클릭율</td><td class="hi">가능 — 안 눌러보고 배길 수 없는 상품</td></tr>
         <tr><td>3. 구매전환율</td><td class="hi">가능 — 2번과 같음</td></tr>
         <tr><td>4. 객단가</td><td class="hi">가능 — 2번과 같음</td></tr>
-        <tr><td>5. 수수료율</td><td>불가능</td></tr>
+        <tr><td>5. 수수료율</td><td>불가능 — <span class="hi">여러분 자리에선</span></td></tr>
       </tbody>
     </table>
+    <div class="source-note">수수료율을 바꾸는 자리는 따로 있습니다. <b>영업관리</b> — 1%가 연 억 단위로 움직이는 협상 테이블입니다</div>
   </section>
 
   <section class="slide" data-period="3">
     <div class="kw-eyebrow">그럼 우리가 집중해야 될 것은?</div>
     <div class="kw-text">어떤 상품을 고르느냐는 <span class="hl">안목</span><br>그 상품을 어떻게 소개할 것이냐는 <span class="hl">센스</span></div>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">오늘 3교시, 이거 하나만</div>
+    <div class="kw-text" style="font-size:clamp(20px,2.7vw,32px);">유입 <span class="hl">×</span> 전환율 <span class="hl">×</span> 객단가<br>매출 올리는 방법은 이 셋 말고 없습니다</div>
+    <div class="mission-sub" style="margin-top:24px;">그럼 전환율은 누가 올리나요? — <b>여러분입니다. 쇼호스트랑 PD가요.</b></div>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">저희 회사 얘기라 낯 뜨겁지만</div>
+    <div class="kw-text">라이브커머스 매출 <span class="hl">5년 만에 5배</span></div>
+    <div class="mission-sub" style="margin-top:20px;">매일 새 방송을 만든 게 아니라 — '우아쇼'·'스타쇼' 같은 <b>고정 프로그램</b></div>
+    <div class="source-note">회당 매출이 업계 평균의 2~3배. 매주 같은 시간에 <b>기다리는 사람</b>이 있으니까요</div>
   </section>
 
   <section class="slide" data-period="3">
@@ -912,6 +939,22 @@ body{
     <div class="kw-text">"마케팅의 목표는<br><span class="hl">영업을 불필요하게</span> 만드는 것이다"</div>
   </section>
 
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">즉석 투표 · 손들기</div>
+    <div class="list-title">마케팅에 가장 가까운 것은?</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
+      <li>A. 예쁜 광고 영상을 만드는 일</li>
+      <li>B. 사람들이 스스로 사고 싶게 만드는 구조를 짜는 일</li>
+      <li>C. 무조건 가격을 낮추는 일</li>
+      <li>D. SNS에 자주 올리는 일</li>
+    </ul>
+  </section>
+
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">정답은 B</div>
+    <div class="kw-text">나머지는 전부<br><span class="hl">마케팅의 결과물이지, 마케팅 자체가 아닙니다</span></div>
+  </section>
+
   <!-- 저는 이렇게 생각합니다 -->
   <section class="slide" data-period="4">
     <div class="kw-eyebrow">저는 이렇게 생각합니다</div>
@@ -935,22 +978,6 @@ body{
 
   <!-- 즉석 투표 -->
   <section class="slide" data-period="4">
-    <div class="kw-eyebrow">즉석 투표 · 손들기</div>
-    <div class="list-title">마케팅에 가장 가까운 것은?</div>
-    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
-      <li>A. 예쁜 광고 영상을 만드는 일</li>
-      <li>B. 사람들이 스스로 사고 싶게 만드는 구조를 짜는 일</li>
-      <li>C. 무조건 가격을 낮추는 일</li>
-      <li>D. SNS에 자주 올리는 일</li>
-    </ul>
-  </section>
-
-  <section class="slide" data-period="4">
-    <div class="kw-eyebrow">정답은 B</div>
-    <div class="kw-text">나머지는 전부<br><span class="hl">마케팅의 결과물이지, 마케팅 자체가 아닙니다</span></div>
-  </section>
-
-  <section class="slide" data-period="4">
     <div class="kw-eyebrow">이거 하나만 기억하세요</div>
     <div class="kw-text">측정하지 않으면<br><span class="hl">개선할 수 없다</span></div>
   </section>
@@ -973,11 +1000,73 @@ body{
     </table>
   </section>
 
-  <!-- 초미니 실습 -->
+  <!-- 초미니 실습 · 손으로 먼저 (3분) -->
   <section class="slide" data-period="4">
-    <div class="kw-eyebrow">초미니 실습 · 지금 바로</div>
-    <div class="kw-text">나 자신을 상품으로,<br><span class="hl">15초 홍보 문구</span> 써보기</div>
-    <div class="mission-sub" style="margin-top:20px;">다 쓰신 분? 옆 사람에게 바로 말해보세요</div>
+    <div class="kw-eyebrow">초미니 실습 · 3분</div>
+    <div class="kw-text">가방에서 아무거나 하나 꺼내서,<br><span class="hl">방금 그 4칸</span>을 손으로 채우세요</div>
+    <div class="mission-sub" style="margin-top:20px;">필통·텀블러·이어폰·립밤 — 없으면 옆 사람 거 뺏으세요</div>
+    <div class="source-note">규칙 하나. <b>장점은 1개만.</b> 30초에 3개 넣으면 0개 전달됩니다</div>
+  </section>
+
+  <!-- 오늘 하루의 규칙 -->
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">이제 같은 걸 AI한테 시킵니다</div>
+    <div class="kw-text">AI를 쓰는 게 실력이 아니라<br><span class="hl">다시 시키는 게</span> 실력입니다</div>
+    <div class="mission-sub" style="margin-top:20px;">AI가 준 첫 번째 답을 그대로 쓰면 안 됩니다</div>
+  </section>
+
+  <!-- 템플릿 1 : 생성 -->
+  <section class="slide" data-period="4">
+    <div class="prompt-title">템플릿 1 — 큐시트 생성</div>
+    <div class="prompt-sub">그대로 따라 치세요. 대괄호만 내 물건으로 바꾸면 됩니다</div>
+    <div class="prompt-box">너는 라이브커머스 쇼호스트 대본 작가야.
+상품: <span class="ph">[텀블러 / 재질·용량·가격 등 눈에 보이는 특징 3개를 그대로 적기]</span>
+타겟: <span class="ph">[예 - 사무실에서 하루 종일 앉아 일하는 20대 후반 직장인]</span>
+30초짜리 라이브 커머스 큐시트를 만들어줘.
+형식은 표로, 컬럼은 [시간구간 / 멘트 / 화면·행동] 3개.
+조건:
+- 0~5초에 시선을 잡는 후킹 멘트를 넣을 것
+- <span class="key">장점은 딱 1개만</span> 강조할 것
+- 마지막 5초에 지금 사야 하는 이유를 넣을 것
+- 실제 사람이 말하는 구어체로 쓸 것</div>
+  </section>
+
+  <!-- 템플릿 2 : 후킹 강화 -->
+  <section class="slide" data-period="4">
+    <div class="prompt-title">템플릿 2 — 후킹만 10개</div>
+    <div class="prompt-sub">0~5초가 약하다 싶으면 이걸로 뽑아 쓰세요</div>
+    <div class="prompt-box">위 상품으로 라이브 방송 첫 3초에 쓸 후킹 멘트를 10개 뽑아줘.
+서로 다른 방향으로: 질문형 / 공감형 / 충격 숫자형 / 반전형.
+각 10자~15자 이내, <span class="key">소리 내서 말했을 때 어색하지 않게</span>.</div>
+  </section>
+
+  <!-- 템플릿 3 : 고쳐 시키기 -->
+  <section class="slide" data-period="4">
+    <div class="prompt-title">템플릿 3 — 고쳐 시키기</div>
+    <div class="prompt-sub">이게 핵심입니다. 오늘 심사에서 보는 것도 이겁니다</div>
+    <div class="prompt-box">방금 큐시트, 아래 기준으로 다시 써줘.
+1. 광고 같은 표현(최고의, 완벽한, 혁신적인)을 전부 빼줘
+2. 20대가 실제로 쓰는 말투로 바꿔줘
+3. <span class="key">30초 안에 소리 내어 읽을 수 있는 분량</span>인지 확인하고, 길면 잘라줘
+4. 0~5초 멘트를 3가지 버전으로 제안해줘</div>
+  </section>
+
+  <!-- 작업 중 (실습 내내 띄워둠) -->
+  <section class="slide" data-period="4">
+    <div class="list-title">작업 중 · 20분</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
+      <li>첫 답 그대로 쓰면 안 됩니다 — <b>최소 3번</b> 다시 시키기</li>
+      <li>쓴 큐시트는 반드시 <b>소리 내서</b> 읽어보세요 — 길면 그때 압니다</li>
+      <li>끝나면 조에서 <b>발표할 1명</b>을 뽑아두세요</li>
+    </ul>
+    <div class="mission-sub" style="margin-top:26px;">짝이랑 같이 하셔도 되고 혼자 하셔도 됩니다</div>
+  </section>
+
+  <!-- 공유 7분 -->
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">공유 · 7분</div>
+    <div class="kw-text">조에서 뽑힌 5명,<br><span class="hl">읽지 말고 파세요</span></div>
+    <div class="mission-sub" style="margin-top:20px;">1인 5초 · 낭독 금지 · 실제 연기로</div>
   </section>
 
   <section class="slide" data-period="4">
@@ -1002,6 +1091,7 @@ body{
         <p class="rc-warn">⚠ 미움받는 게 정상</p>
       </div>
     </div>
+    <div class="source-note">나머지 3명은 <b>출연자 2 · 촬영 1</b> — 역할 안 정하고 시작한 조는 100% 시간 안에 못 끝냅니다</div>
   </section>
 
   <section class="slide" data-period="4">
@@ -1016,7 +1106,7 @@ body{
     <div class="eyebrow">직무 세미나 · 현직자 특강</div>
     <div class="s-period">5교시</div>
     <div class="s-title">단체 과제 — 기획과 제작</div>
-    <div class="s-meta tabular">14:30 – 15:45 &nbsp;·&nbsp; 우리 조의 라이브 30초</div>
+    <div class="s-meta tabular">14:30 – 15:45 &nbsp;·&nbsp; 우리 조의 라이브 60초</div>
   </section>
 
   <section class="slide" data-period="5">
@@ -1030,14 +1120,30 @@ body{
     <div class="kw-text">목표 유입 · 전환율 · 예상매출<br><span class="hl">한 줄, 반드시</span></div>
   </section>
 
+  <!-- 심사 배점표 (기획 전에 미리 공개 / 6교시에서 같은 표를 다시 띄움) -->
+  <section class="slide" data-period="5">
+    <div class="tslide-title">심사 기준 · 100점</div>
+    <table class="tslide-table">
+      <thead><tr><th>항목</th><th>배점</th><th>보는 것</th></tr></thead>
+      <tbody>
+        <tr><td>후킹력</td><td class="hi">25점</td><td>첫 3초에 손가락이 멈추는가</td></tr>
+        <tr><td>타겟 구체성</td><td class="hi">20점</td><td>'사람'인가 '집단'인가</td></tr>
+        <tr><td>숫자 설계</td><td class="hi">20점</td><td>유입·전환율·객단가 근거</td></tr>
+        <tr><td>완성도</td><td class="hi">20점</td><td>60초, 메시지 하나</td></tr>
+        <tr><td>AI 활용</td><td class="hi">15점</td><td>몇 번 고쳐 물었나</td></tr>
+      </tbody>
+    </table>
+    <div class="source-note">숨기지 않습니다. 이 표를 보고 기획하세요</div>
+  </section>
+
   <section class="slide" data-period="5">
     <div class="tl-title">오늘 오후 타임라인</div>
     <div class="tl-strip">
       <div class="tl-chip"><div class="tl-time">14:30</div><div class="tl-label">미션 확인</div></div>
       <div class="tl-chip"><div class="tl-time">14:35</div><div class="tl-label">상품 선택</div></div>
-      <div class="tl-chip"><div class="tl-time">14:40</div><div class="tl-label">기획 25분</div></div>
-      <div class="tl-chip"><div class="tl-time">15:05</div><div class="tl-label">동료 피드백 5분</div></div>
-      <div class="tl-chip"><div class="tl-time">15:10</div><div class="tl-label">휴식 5분</div></div>
+      <div class="tl-chip"><div class="tl-time">14:40</div><div class="tl-label">기획 20분</div></div>
+      <div class="tl-chip"><div class="tl-time">15:00</div><div class="tl-label">동료 피드백 5분</div></div>
+      <div class="tl-chip"><div class="tl-time">15:05</div><div class="tl-label">휴식 10분</div></div>
       <div class="tl-chip"><div class="tl-time">15:15</div><div class="tl-label">큐시트 30분</div></div>
       <div class="tl-chip"><div class="tl-time">15:45</div><div class="tl-label">리허설·촬영</div></div>
       <div class="tl-chip"><div class="tl-time">16:05</div><div class="tl-label">발표 20분</div></div>
@@ -1065,9 +1171,23 @@ body{
 
   <!-- 동료 피드백 -->
   <section class="slide" data-period="5">
-    <div class="kw-eyebrow">중간 점검 · 동료 피드백</div>
-    <div class="kw-text">옆 조와 기획서 교환,<br><span class="hl">1분 안에 냉정하게</span></div>
-    <div class="mission-sub" style="margin-top:20px;">"이거 3초 안에 후킹 안 될 것 같은데?" — 솔직하게</div>
+    <div class="kw-eyebrow">중간 점검 · 동료 피드백 5분</div>
+    <div class="kw-text">옆 조와 기획서 교환,<br><span class="hl">냉정하게</span></div>
+    <div class="mission-sub" style="margin-top:20px;">1↔2조 · 3↔4조 · 5조↔강사</div>
+  </section>
+
+  <!-- 동료 피드백 진행표 -->
+  <section class="slide" data-period="5">
+    <div class="tslide-title">5분 안에, 이 셋만 보세요</div>
+    <table class="tslide-table">
+      <thead><tr><th>볼 것</th><th>묻는 질문</th></tr></thead>
+      <tbody>
+        <tr><td class="hi">타겟</td><td>'집단'이 아니라 '사람'인가</td></tr>
+        <tr><td class="hi">첫 3초</td><td>화면이 눈앞에 그려지는가</td></tr>
+        <tr><td class="hi">6번 숫자</td><td>유입·전환율·객단가 근거가 말이 되는가</td></tr>
+      </tbody>
+    </table>
+    <div class="source-note">읽기 2분 · 쓰기 2분 · 돌려주기 1분 — 상대 기획서 여백에 <b>"옆 조 한 줄"</b>을 남깁니다</div>
   </section>
 
   <section class="slide" data-period="5">
@@ -1077,6 +1197,56 @@ body{
       <div class="step3-card"><div class="s3-num">STEP 2</div><h4>압축</h4><p>소리 내 읽어 60초 안으로</p></div>
       <div class="step3-card"><div class="s3-num">STEP 3</div><h4>현실화</h4><p>소품 없이, 20대 말투로</p></div>
     </div>
+    <div class="source-note">프롬프트 원문은 인쇄해서 조별로 배부합니다. <b>지우지 마세요 — 이따 화면에 그대로 띄웁니다</b></div>
+  </section>
+
+  <!-- STEP 1 : 생성 -->
+  <section class="slide" data-period="5">
+    <div class="prompt-title">STEP 1 — 생성</div>
+    <div class="prompt-sub">마감 15:45 · 프롬프터 노트북에서 그대로 치세요</div>
+    <div class="prompt-box">너는 라이브커머스 큐시트 작가야.
+<span class="ph">[상품 정보]</span> 이름/가격/특징 3개:
+<span class="ph">[타겟]</span> (기획서 1번 그대로 붙여넣기):
+<span class="ph">[컨셉]</span> (기획서 2번 그대로 붙여넣기):
+<span class="ph">[강조할 장점 1개]</span> (기획서 4번):
+
+위 내용으로 60초 라이브 큐시트를 표로 만들어줘.
+컬럼: 시간구간 / 멘트 / 화면·행동 / 소품
+조건:
+- 0~5초 후킹, 5~20초 공감, 20~45초 시연, 45~60초 구매유도 구조
+- 멘트는 실제 말하는 구어체, <span class="key">문장당 15자 이내</span>
+- 출연자는 2명이라고 가정하고 누가 말하는지 표시</div>
+  </section>
+
+  <!-- STEP 2 : 압축 -->
+  <section class="slide" data-period="5">
+    <div class="prompt-title">STEP 2 — 압축</div>
+    <div class="prompt-sub">제일 중요합니다. 여기서 안 자르면 촬영에서 터집니다</div>
+    <div class="prompt-box">지금 대본을 소리 내서 읽으면 몇 초 걸릴지 계산해줘.
+<span class="key">60초를 넘으면 의미를 유지한 채로 잘라줘.</span>
+잘라낼 때 우선순위: 형용사 → 부연설명 → 인사말 순으로 삭제.</div>
+  </section>
+
+  <!-- STEP 3 : 현실화 -->
+  <section class="slide" data-period="5">
+    <div class="prompt-title">STEP 3 — 현실화</div>
+    <div class="prompt-sub">카메라 한 대, 1테이크로 찍을 수 있게 만드는 단계</div>
+    <div class="prompt-box">이 대본을 아래 조건으로 다시 써줘.
+1. 소품 없이 손에 든 상품 하나로만 촬영 가능하게
+2. 20대가 실제로 쓰는 말투로 (광고체 금지)
+3. 첫 5초 멘트를 3가지 버전으로 제안
+4. <span class="key">카메라 한 대, 한 번에 쭉 찍을 수 있는 동선</span>으로</div>
+  </section>
+
+  <!-- 작업 중 : 촬영·제출 -->
+  <section class="slide" data-period="5">
+    <div class="list-title">15:45 촬영 · 제출</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
+      <li>세로 화면, <b>60초 이내, 1테이크</b></li>
+      <li>영상 + <b>STEP 1 프롬프트 원문</b>을 오픈카톡방에 올립니다</li>
+      <li>마감 <b>16:05</b> — 안 들어온 조는 발표 못 합니다</li>
+    </ul>
+    <div class="mission-sub" style="margin-top:26px;">완벽한 대본은 아무도 안 봅니다. 찍은 영상만 봅니다</div>
   </section>
 
   <section class="slide" data-period="5">
@@ -1100,37 +1270,30 @@ body{
   </section>
 
   <section class="slide" data-period="6">
-    <div class="kw-eyebrow">왜 첫 3초인가</div>
-    <div class="stat-row">
-      <div class="stat-box"><span class="num">3.75초</span><span class="lbl">틱톡 평균 시청시간</span></div>
-      <div class="stat-arrow">·</div>
-      <div class="stat-box"><span class="num">71%</span><span class="lbl">몇 초 안에 이탈 결정</span></div>
-    </div>
-    <div class="source-note">Kapwing, 2026</div>
-  </section>
-
-  <section class="slide" data-period="6">
-    <div class="list-title">조당 발표 순서</div>
+    <div class="list-title">조당 발표 순서 · 4분</div>
     <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
-      <li>30초 — 기획서 요약</li>
-      <li>60초 — 영상 상영</li>
-      <li>60초 — 프롬프트 비교</li>
-      <li>60초 — 강사 피드백</li>
-      <li>30초 — 다음 조 세팅</li>
+      <li><b>30초</b> — 기획서 요약 (발표자, 대본 읽기 금지)</li>
+      <li><b>60초</b> — 영상 상영 &nbsp;<span style="color:var(--ink-faint);font-size:.85em;">← 이 60초 동안 강사가 채점표에 점수를 적습니다</span></li>
+      <li><b>30초</b> — 프롬프터가 자기 STEP 1 원문을 카톡방에서 열어 설명</li>
+      <li><b>60초</b> — 강사 피드백 = 그 조의 심사평 (칭찬 1개 + 고칠 점 1개)</li>
+      <li><b>30초</b> — 관객 점수 집계 + 다음 조 세팅</li>
     </ul>
+    <div class="source-note">심사평을 뒤로 미루지 않습니다. 발표가 끝나면 채점도 끝나 있어야 16:30에 맞습니다</div>
   </section>
 
   <!-- 관객 투표 -->
   <section class="slide" data-period="6">
-    <div class="kw-eyebrow">발표가 끝나면</div>
+    <div class="kw-eyebrow">영상이 끝나면 바로</div>
     <div class="kw-text">이제, <span class="hl">우리가 심사위원</span></div>
-    <div class="mission-sub" style="margin-top:20px;">손가락 1~5개로 바로 점수 매기기</div>
+    <div class="mission-sub" style="margin-top:20px;">손가락 <b>1~5개</b>로 즉시 점수 — 자기 조는 건너뜁니다</div>
+    <div class="source-note">각 조 <b>타임키퍼가 조 평균 1개 숫자</b>로 보고합니다. 발표당 숫자 5개만 칠판에 적으면 끝</div>
   </section>
 
   <section class="slide" data-period="6">
     <div class="kw-eyebrow">오늘의 핵심 장치</div>
     <div class="kw-text">같은 상품, 같은 도구인데<br>영상은 <span class="hl">완전히 달랐다</span></div>
     <div class="mission-sub" style="margin-top:20px;">차이는 질문에서 납니다</div>
+    <div class="source-note">5조 STEP 1 프롬프트가 카톡방에 시간순으로 쌓여 있습니다 — 그대로 위아래로 훑으면 됩니다</div>
   </section>
 
   <section class="slide" data-period="6">
@@ -1145,7 +1308,7 @@ body{
         <tr><td>AI 활용</td><td class="hi">15점</td><td>몇 번 고쳐 물었나</td></tr>
       </tbody>
     </table>
-    <div class="source-note">여기에 관객(다른 조) 점수도 참고로 반영됩니다</div>
+    <div class="source-note">강사 점수 100점 + 관객 점수(조별 평균 5개)를 참고로 반영합니다</div>
   </section>
 
   <section class="slide" data-period="6">
@@ -1153,6 +1316,16 @@ body{
       <div class="kw-eyebrow">마무리</div>
       <div class="kw-text">질문 못 하는 사람의<br><span class="hl">자리는 없어집니다</span></div>
     </div>
+  </section>
+
+  <section class="slide" data-period="6">
+    <div class="list-title">16:30 – 17:00</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
+      <li>쉬는 시간 — 밀린 만큼 여기서 흡수합니다</li>
+      <li>개인 질문 받는 시간 — 아침에 못 다룬 질문, 연봉·이직·포트폴리오 뭐든</li>
+      <li>오픈카톡방 질문은 <b>하나도 안 버리고</b> 7교시에 답합니다</li>
+    </ul>
+    <div class="mission-sub" style="margin-top:26px;">17:00에 딱 시작합니다</div>
   </section>
 
   <section class="slide" data-period="6">
@@ -1220,72 +1393,5 @@ body{
   try{ startAt = parseInt(sessionStorage.getItem('lcd2-slide'),10) || 0; }catch(e){}
   go(startAt);
 
-  /* ---- timers ---- */
-  var CIRC = 2 * Math.PI * 92;
-  Array.prototype.slice.call(document.querySelectorAll('[data-timer]')).forEach(function(wrap){
-    var duration = parseInt(wrap.dataset.default, 10) * 1000;
-    var remaining = duration;
-    var running = false;
-    var endAt = null;
-    var raf = null;
-
-    var bar = wrap.querySelector('.bar');
-    var display = wrap.querySelector('.timer-display');
-    bar.style.strokeDasharray = CIRC;
-
-    var slide = wrap.closest('.slide');
-    var toggleBtn = slide.querySelector('[data-act="toggle"]');
-    var resetBtn = slide.querySelector('[data-act="reset"]');
-    var presets = Array.prototype.slice.call(slide.querySelectorAll('.preset'));
-
-    function render(){
-      var s = Math.ceil(remaining/1000);
-      var m = Math.floor(s/60);
-      var sec = s%60;
-      display.textContent = pad(m) + ':' + pad(sec);
-      var frac = Math.max(0, Math.min(1, remaining/duration));
-      bar.style.strokeDashoffset = CIRC * (1-frac);
-      wrap.classList.toggle('done', remaining <= 0);
-    }
-
-    function tick(){
-      if(!running) return;
-      remaining = Math.max(0, endAt - Date.now());
-      render();
-      if(remaining <= 0){
-        running = false;
-        toggleBtn.textContent = '시작';
-        return;
-      }
-      raf = requestAnimationFrame(tick);
-    }
-
-    function start(){
-      if(remaining <= 0) return;
-      running = true;
-      endAt = Date.now() + remaining;
-      toggleBtn.textContent = '일시정지';
-      raf = requestAnimationFrame(tick);
-    }
-    function pause(){
-      running = false;
-      remaining = Math.max(0, endAt - Date.now());
-      toggleBtn.textContent = '시작';
-      cancelAnimationFrame(raf);
-    }
-    toggleBtn.addEventListener('click', function(){ running ? pause() : start(); });
-    resetBtn.addEventListener('click', function(){
-      running = false; cancelAnimationFrame(raf);
-      remaining = duration; toggleBtn.textContent = '시작'; render();
-    });
-    presets.forEach(function(p){
-      p.addEventListener('click', function(){
-        running = false; cancelAnimationFrame(raf);
-        duration = parseInt(p.dataset.sec,10) * 1000;
-        remaining = duration; toggleBtn.textContent = '시작'; render();
-      });
-    });
-    render();
-  });
 })();
 </script>
