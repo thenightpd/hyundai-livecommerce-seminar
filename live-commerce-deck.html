@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>라이브커머스 생태계 발표 슬라이드</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -270,7 +271,6 @@ body{
 .tl-chip .tl-label{font-size:14px;color:var(--ink-soft);margin-top:5px;}
 
 /* ---- hero invert (recap punch slide) ---- */
-.slide.hero-invert{background:#FFFFFF;}
 .hero-lines{display:flex;flex-direction:column;gap:0;max-width:min(880px,88vw);}
 .hero-lines p{
   margin:0;padding:30px 0;font-weight:700;color:#3A3226;
@@ -322,6 +322,309 @@ body{
 .career-seg .seg-job{font-family:var(--font-label);font-size:clamp(11px,1.2vw,14px);font-weight:700;color:var(--ink-soft);height:36px;display:flex;align-items:center;text-align:center;line-height:1.3;}
 .career-seg .seg-bar{width:100%;height:58px;border-radius:8px;}
 .career-seg .seg-year{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.2vw,13px);color:var(--ink-faint);}
+
+.list-items li,
+.axis-bullets li,
+.flow2 li,
+.instructor-info li,
+.tslide-table tbody tr,
+.steps3 .step3-card,
+.role-cards-dark .rcard,
+.tl-strip .tl-chip,
+.career-timeline .career-seg,
+.hero-lines p,
+.stat-row .stat-box {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.slide.active:not([data-build]) .list-items li,
+.slide.active:not([data-build]) .axis-bullets li,
+.slide.active:not([data-build]) .flow2 li,
+.slide.active:not([data-build]) .instructor-info li,
+.slide.active:not([data-build]) .tslide-table tbody tr,
+.slide.active:not([data-build]) .steps3 .step3-card,
+.slide.active:not([data-build]) .role-cards-dark .rcard,
+.slide.active:not([data-build]) .tl-strip .tl-chip,
+.slide.active:not([data-build]) .career-timeline .career-seg,
+.slide.active:not([data-build]) .hero-lines p,
+.slide.active:not([data-build]) .stat-row .stat-box {
+  animation-name: stagger-up;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(.16,.8,.3,1);
+  animation-fill-mode: both;
+}
+
+.slide.active:not([data-build]) .list-items li:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .list-items li:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .list-items li:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .list-items li:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .list-items li:nth-child(5){animation-delay:0.24s;}
+.slide.active:not([data-build]) .list-items li:nth-child(6){animation-delay:0.3s;}
+.slide.active:not([data-build]) .list-items li:nth-child(n+7){animation-delay:0.48s;}
+.slide.active:not([data-build]) .axis-bullets li:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .axis-bullets li:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .axis-bullets li:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .axis-bullets li:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .axis-bullets li:nth-child(n+5){animation-delay:0.48s;}
+.slide.active:not([data-build]) .flow2 li:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .flow2 li:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .flow2 li:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .flow2 li:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .flow2 li:nth-child(5){animation-delay:0.24s;}
+.slide.active:not([data-build]) .flow2 li:nth-child(n+6){animation-delay:0.48s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(5){animation-delay:0.24s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(6){animation-delay:0.3s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(7){animation-delay:0.36s;}
+.slide.active:not([data-build]) .instructor-info li:nth-child(n+8){animation-delay:0.48s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(5){animation-delay:0.24s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(6){animation-delay:0.3s;}
+.slide.active:not([data-build]) .tslide-table tbody tr:nth-child(n+7){animation-delay:0.48s;}
+.slide.active:not([data-build]) .steps3 .step3-card:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .steps3 .step3-card:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .steps3 .step3-card:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .steps3 .step3-card:nth-child(n+4){animation-delay:0.48s;}
+.slide.active:not([data-build]) .role-cards-dark .rcard:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .role-cards-dark .rcard:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .role-cards-dark .rcard:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .role-cards-dark .rcard:nth-child(n+4){animation-delay:0.48s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(5){animation-delay:0.24s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(6){animation-delay:0.3s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(7){animation-delay:0.36s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(8){animation-delay:0.42s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(9){animation-delay:0.48s;}
+.slide.active:not([data-build]) .tl-strip .tl-chip:nth-child(n+10){animation-delay:0.48s;}
+.slide.active:not([data-build]) .career-timeline .career-seg:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .career-timeline .career-seg:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .career-timeline .career-seg:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .career-timeline .career-seg:nth-child(4){animation-delay:0.18s;}
+.slide.active:not([data-build]) .career-timeline .career-seg:nth-child(5){animation-delay:0.24s;}
+.slide.active:not([data-build]) .career-timeline .career-seg:nth-child(n+6){animation-delay:0.48s;}
+.slide.active:not([data-build]) .hero-lines p:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .hero-lines p:nth-child(2){animation-delay:0.06s;}
+.slide.active:not([data-build]) .hero-lines p:nth-child(3){animation-delay:0.12s;}
+.slide.active:not([data-build]) .hero-lines p:nth-child(n+4){animation-delay:0.48s;}
+.slide.active:not([data-build]) .stat-row .stat-box:nth-child(1){animation-delay:0.0s;}
+.slide.active:not([data-build]) .stat-row .stat-box:nth-child(3){animation-delay:0.06s;}
+.slide.active:not([data-build]) .stat-row .stat-box:nth-child(5){animation-delay:0.12s;}
+.slide.active:not([data-build]) .stat-row .stat-box:nth-child(7){animation-delay:0.18s;}
+.slide.active:not([data-build]) .stat-row .stat-box:nth-child(n+9){animation-delay:0.18s;}
+
+
+/* =====================================================================
+   VISUAL SYSTEM (샘플) — 9개 시스템
+   1) 스태거 등장   : 위쪽 "hidden base + delay" 블록 (원본 CSS 바로 아래에 삽입됨)
+   2) 빌드 모드
+   3) 숫자 카운트업 (JS)
+   4) 교시별 색 아이덴티티
+   5) 리듬 슬라이드 (hero-invert 강화)
+   6) 진행 바 (세그먼트)
+   7) 배경 질감 (방사형 광원 + 노이즈)
+   8) 표/카드 강조
+   9) 사진 Ken Burns
+   ===================================================================== */
+
+/* ---- keyframes ---- */
+@keyframes stagger-up{ from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+@keyframes bdPop{ 0%{opacity:0;transform:translateY(14px) scale(.98);} 100%{opacity:1;transform:translateY(0) scale(1);} }
+@keyframes hiFlash{ 0%{box-shadow:0 0 0 0 var(--accent-soft);} 45%{box-shadow:0 0 0 9px var(--accent-soft);} 100%{box-shadow:0 0 0 0 rgba(0,0,0,0);} }
+@keyframes kenburns{ from{transform:scale(1);} to{transform:scale(1.045);} }
+@keyframes fadeUp{ from{opacity:0;transform:translateY(14px);} to{opacity:1;transform:translateY(0);} }
+
+/* =====================================================================
+   4) 교시별 색 아이덴티티 — 좁은 오렌지→앰버→코랄 범위
+   ===================================================================== */
+:root{
+  --acc-p1:#FF583D; --acc-p2:#FF6B3D; --acc-p3:#FF853D; --acc-p4:#FFA53D;
+  --acc-p5:#FFB93D; --acc-p6:#FF983D; --acc-p7:#FF783D;
+  --glow-p1:#470A00; --glow-p2:#471100; --glow-p3:#471A00; --glow-p4:#472600;
+  --glow-p5:#472D00; --glow-p6:#472200; --glow-p7:#471600;
+  /* 리듬 슬라이드 전용 — 앰비언트 글로우(--glow-*)보다 훨씬 진하고 채도 높은
+     "리치 다크" 패널색. 흰 배경 대신 이 색으로 화면 전체를 채워 톤은
+     어둡게 유지하면서도 "이 장은 다르다"는 신호를 준다. */
+  --rhythm-p1:#401811; --rhythm-p2:#401C11; --rhythm-p3:#402311; --rhythm-p4:#402B11;
+  --rhythm-p5:#402F11; --rhythm-p6:#402711; --rhythm-p7:#401F11;
+  --p-glow:var(--glow-p2); --p-tint:rgba(255,107,61,.07); --rhythm-bg:var(--rhythm-p2);
+}
+.slide[data-period="1"]{--accent:var(--acc-p1);--accent-soft:rgba(255,88,61,.14);--p-glow:var(--glow-p1);--p-tint:rgba(255,88,61,.07);--rhythm-bg:var(--rhythm-p1);}
+.slide[data-period="2"]{--accent:var(--acc-p2);--accent-soft:rgba(255,107,61,.14);--p-glow:var(--glow-p2);--p-tint:rgba(255,107,61,.07);--rhythm-bg:var(--rhythm-p2);}
+.slide[data-period="3"]{--accent:var(--acc-p3);--accent-soft:rgba(255,133,61,.14);--p-glow:var(--glow-p3);--p-tint:rgba(255,133,61,.07);--rhythm-bg:var(--rhythm-p3);}
+.slide[data-period="4"]{--accent:var(--acc-p4);--accent-soft:rgba(255,165,61,.14);--p-glow:var(--glow-p4);--p-tint:rgba(255,165,61,.07);--rhythm-bg:var(--rhythm-p4);}
+.slide[data-period="5"]{--accent:var(--acc-p5);--accent-soft:rgba(255,185,61,.14);--p-glow:var(--glow-p5);--p-tint:rgba(255,185,61,.07);--rhythm-bg:var(--rhythm-p5);}
+.slide[data-period="6"]{--accent:var(--acc-p6);--accent-soft:rgba(255,152,61,.14);--p-glow:var(--glow-p6);--p-tint:rgba(255,152,61,.07);--rhythm-bg:var(--rhythm-p6);}
+.slide[data-period="7"]{--accent:var(--acc-p7);--accent-soft:rgba(255,120,61,.14);--p-glow:var(--glow-p7);--p-tint:rgba(255,120,61,.07);--rhythm-bg:var(--rhythm-p7);}
+
+/* 교시 타이틀 슬라이드에서만 색을 강하게 — .eyebrow/.s-period/.s-title/.s-meta는
+   원본 전체에서 "교시 타이틀" 슬라이드에만 쓰이는 클래스라 별도 마킹 없이도 안전하게 강조 가능 */
+.eyebrow, .s-period, .s-title, .s-meta{ opacity:0; transform:translateY(18px); }
+.slide.active .eyebrow{ animation:stagger-up .5s ease .02s both; }
+.slide.active .s-period{ animation:stagger-up .55s ease .1s both; }
+.slide.active .s-title{ animation:stagger-up .5s ease .18s both; }
+.slide.active .s-meta{ animation:stagger-up .5s ease .26s both; }
+
+.s-period{ position:relative; z-index:1; text-shadow:0 0 70px var(--accent-soft); }
+.s-period::before{
+  content:""; position:absolute; left:50%; top:50%;
+  width:150%; height:220%; transform:translate(-50%,-50%);
+  background:radial-gradient(closest-side, var(--accent-soft), transparent 72%);
+  z-index:-1; pointer-events:none;
+}
+.s-title{ position:relative; padding-bottom:16px; }
+.s-title::after{
+  content:""; position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+  width:64px; height:3px; border-radius:2px; background:var(--accent);
+}
+
+/* =====================================================================
+   7) 배경 질감 — 슬라이드마다 교시색이 반영되는 은은한 방사형 광원 + 미세 노이즈
+   ===================================================================== */
+.slide:not(.hero-invert){
+  background: radial-gradient(circle at 50% 42%, var(--p-glow) 0%, var(--bg) 62%);
+}
+.deck::after{
+  /* mid-gray, low & noise-varying alpha baked into the SVG itself (feColorMatrix
+     pins R=G=B=.5 and squashes alpha to ~6% of the turbulence's own alpha) —
+     deliberately NOT using mix-blend-mode:overlay here: overlay amplifies
+     contrast against a raw feTurbulence image and produced visible gray/brown
+     blotching instead of a fine grain (caught by direct pixel inspection). */
+  content:""; position:fixed; inset:0; z-index:6; pointer-events:none;
+  opacity:.5;
+  background-repeat:repeat; background-size:160px 160px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' result='t'/%3E%3CfeColorMatrix in='t' type='matrix' values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* =====================================================================
+   5) 리듬 슬라이드 — hero-invert 재설계
+   (사용자 피드백: 흰 배경+검은 글씨는 이 덱의 톤과 안 맞음 → 폐기.
+   대신 다크 테마 안에서 "리치 다크" 패널색을 화면 전체에 깔고, 인용구를
+   카드형으로 다르게 짜서 리듬을 만든다. 배경은 절대 밝게 만들지 않는다.)
+   ===================================================================== */
+.slide.hero-invert{
+  background:
+    radial-gradient(150% 130% at 50% -12%, var(--accent-soft), transparent 62%),
+    var(--rhythm-bg);
+  /* NOTE: .slide는 이미 position:absolute (base rule)라 ::before의 포함 블록이
+     된다 — 여기서 position을 다시 선언하면 specificity로 base rule을 덮어써서
+     박스가 뷰포트를 채우지 못하고 콘텐츠 크기로 쪼그라드는 버그가 났었다. */
+}
+.slide.hero-invert::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:8px; background:var(--accent);
+}
+/* 원본 CSS의 얇은 구분선(border-top) + 흰 배경용 어두운 글자색을 폐기하고
+   카드형 스택으로 교체: 두꺼운 좌측 액센트 바 + 은은한 패널 배경.
+   원본 클래스/문구는 그대로 두고, 이 규칙들이 스타일시트 뒤쪽에 있어
+   (동일 우선순위, 나중에 오는 규칙이 이김) 원본의 흰 배경 룩을 덮어쓴다. */
+.hero-lines{ display:flex; flex-direction:column; gap:18px; max-width:min(880px,88vw); }
+.hero-lines p{
+  margin:0; padding:28px 34px; font-weight:700; color:var(--ink);
+  font-size:clamp(20px,2.8vw,34px); line-height:1.5;
+  background:rgba(255,255,255,.06);
+  border-top:none; border-left:6px solid var(--accent);
+  border-radius:0 16px 16px 0;
+}
+.hero-lines p:first-child{ padding-top:28px; }
+.hero-lines p:last-child{ padding-bottom:28px; }
+.hero-lines .hl{
+  color:var(--accent); font-weight:900;
+  font-size:1.28em; line-height:1.3; display:inline-block; margin-top:6px;
+}
+
+/* =====================================================================
+   2) 빌드 모드 — [data-build] 슬라이드 안의 항목은 JS가 순서대로 공개
+   (li / tr / step3-card / rcard / tl-chip 를 대상으로, 마크업엔 슬라이드
+    태그에 data-build 속성 하나만 추가하면 됨)
+   ===================================================================== */
+.slide[data-build] .list-items li,
+.slide[data-build] .axis-bullets li,
+.slide[data-build] .flow2 li,
+.slide[data-build] .tslide-table tbody tr,
+.slide[data-build] .steps3 .step3-card,
+.slide[data-build] .role-cards-dark .rcard,
+.slide[data-build] .tl-strip .tl-chip{
+  opacity:0; transform:translateY(14px);
+}
+/* 버그 메모: table 요소가 border-collapse:collapse면 셀 경계선은 "테이블" 레벨에서
+   그려져서 tr에 준 opacity:0/transform이 그 collapsed border에는 적용되지
+   않는다 (실제 크롬에서 확인 — 빌드 전인데 구분선·좌측 액센트 바가 다
+   보였음). data-build가 붙은 표에서만 separate로 바꿔 각 셀이 자기 테두리를
+   직접 그리게 해서 opacity가 제대로 먹도록 한다. 다른 표(빌드 아님)는
+   원본 그대로 collapse 유지. */
+.slide[data-build] .tslide-table{ border-collapse:separate; border-spacing:0; }
+[data-build] .bd-shown{ animation: bdPop .32s cubic-bezier(.2,.8,.3,1) both; }
+
+/* =====================================================================
+   8) 표 · 카드 강조
+   ===================================================================== */
+.tslide-table tr.tr-hi{ background:var(--accent-soft); }
+.tslide-table tr.tr-hi td:first-child{ border-left:4px solid var(--accent); padding-left:14px; }
+.slide.active:not([data-build]) .tslide-table tr.tr-hi{
+  animation-name: stagger-up, hiFlash;
+  animation-duration: .5s, .8s;
+  animation-timing-function: cubic-bezier(.16,.8,.3,1), ease-out;
+  animation-fill-mode: both, both;
+}
+[data-build] .tslide-table tr.tr-hi.bd-shown{
+  animation-name: bdPop, hiFlash;
+  animation-duration: .32s, .8s;
+  animation-timing-function: cubic-bezier(.2,.8,.3,1), ease-out;
+  animation-fill-mode: both, both;
+}
+.step3-card, .rcard, .tl-chip{
+  background:linear-gradient(160deg, var(--panel-2), var(--panel));
+  box-shadow:0 14px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+/* =====================================================================
+   9) 사진 슬라이드 — 느린 줌(Ken Burns) + 캡션 지연 등장
+   ===================================================================== */
+.slide.active .photo-row img,
+.slide.active .ps-single{
+  animation: kenburns 20s ease-in-out infinite alternate;
+  transform-origin:center;
+}
+.ps-caption{ opacity:0; }
+.slide.active .ps-caption{ animation: fadeUp .6s cubic-bezier(.16,.8,.3,1) .5s both; }
+
+/* =====================================================================
+   6) 진행 바 — 103장(샘플에서는 로드된 슬라이드) 기준 교시별 세그먼트
+   ===================================================================== */
+#progress{
+  position:fixed; left:0; right:0; bottom:0; height:9px; z-index:32;
+  display:flex; background:rgba(0,0,0,.55);
+}
+#progress .seg{
+  position:relative; height:100%; margin-right:2px; overflow:hidden;
+  background:rgba(255,255,255,.08);
+}
+#progress .seg:last-child{ margin-right:0; }
+#progress .seg-fill{
+  position:absolute; left:0; top:0; bottom:0; width:0%;
+  background:var(--seg-accent,var(--gold));
+  transition:width .3s ease;
+}
+#progress .seg.done .seg-fill{ width:100%; }
+#progress .seg.cur .seg-fill{ box-shadow:0 0 12px 1px var(--seg-accent,var(--gold)); }
+#progress .seg.seg-p1{--seg-accent:var(--acc-p1);}
+#progress .seg.seg-p2{--seg-accent:var(--acc-p2);}
+#progress .seg.seg-p3{--seg-accent:var(--acc-p3);}
+#progress .seg.seg-p4{--seg-accent:var(--acc-p4);}
+#progress .seg.seg-p5{--seg-accent:var(--acc-p5);}
+#progress .seg.seg-p6{--seg-accent:var(--acc-p6);}
+#progress .seg.seg-p7{--seg-accent:var(--acc-p7);}
+
+.hud .hud-build{ color:var(--ink-faint); margin-left:2px; }
 </style>
 
 <div class="deck" id="deck">
@@ -816,7 +1119,7 @@ body{
     </ul>
   </section>
 
-  <section class="slide" data-period="3">
+  <section class="slide" data-period="3" data-build>
     <div class="kw-eyebrow">예제 1 · 정답</div>
     <ol class="flow2" style="text-align:left;">
       <li><span class="fnum">1</span><span>1,000만원 ÷ 39,000원 = <b>약 257건</b> 구매 필요</span></li>
@@ -840,7 +1143,7 @@ body{
     </table>
   </section>
 
-  <section class="slide" data-period="3">
+  <section class="slide" data-period="3" data-build>
     <div class="kw-eyebrow">예제 2 · 정답</div>
     <ol class="flow2" style="text-align:left;">
       <li><span class="fnum">1</span><span>조회수 <b>120만</b> → 클릭율 10% → 클릭 <b>12만명</b></span></li>
@@ -883,7 +1186,7 @@ body{
     </ul>
   </section>
 
-  <section class="slide" data-period="3">
+  <section class="slide" data-period="3" data-build>
     <div class="tslide-title">그래서, 통제할 수 있을까?</div>
     <table class="tslide-table">
       <tbody>
@@ -939,7 +1242,7 @@ body{
     <div class="kw-text">"마케팅의 목표는<br><span class="hl">영업을 불필요하게</span> 만드는 것이다"</div>
   </section>
 
-  <section class="slide" data-period="4">
+  <section class="slide" data-period="4" data-build>
     <div class="kw-eyebrow">즉석 투표 · 손들기</div>
     <div class="list-title">마케팅에 가장 가까운 것은?</div>
     <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
@@ -1121,7 +1424,7 @@ body{
   </section>
 
   <!-- 심사 배점표 (기획 전에 미리 공개 / 6교시에서 같은 표를 다시 띄움) -->
-  <section class="slide" data-period="5">
+  <section class="slide" data-period="5" data-build>
     <div class="tslide-title">심사 기준 · 100점</div>
     <table class="tslide-table">
       <thead><tr><th>항목</th><th>배점</th><th>보는 것</th></tr></thead>
@@ -1296,7 +1599,7 @@ body{
     <div class="source-note">5조 STEP 1 프롬프트가 카톡방에 시간순으로 쌓여 있습니다 — 그대로 위아래로 훑으면 됩니다</div>
   </section>
 
-  <section class="slide" data-period="6">
+  <section class="slide" data-period="6" data-build>
     <div class="tslide-title">심사 기준 · 100점</div>
     <table class="tslide-table">
       <thead><tr><th>항목</th><th>배점</th><th>보는 것</th></tr></thead>
@@ -1337,50 +1640,193 @@ body{
 
 </div>
 
-<div class="hud"><b id="hudPeriod">2교시</b><span class="hud-time" id="hudIdx">01 / 12</span></div>
+<div class="hud"><b id="hudPeriod">2교시</b><span class="hud-time" id="hudIdx">01 / 12</span><span class="hud-build" id="hudBuild" hidden></span></div>
 <button class="fsbtn" id="fsBtn">전체화면 (F)</button>
 <button class="navbtn prev" id="prevBtn" aria-label="이전">‹</button>
 <button class="navbtn next" id="nextBtn" aria-label="다음">›</button>
-<div class="dots" id="dots"></div>
+<div class="progress" id="progress"></div>
 
 <script>
 (function(){
   var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-  var dotsWrap = document.getElementById('dots');
   var hudIdx = document.getElementById('hudIdx');
   var hudPeriod = document.getElementById('hudPeriod');
+  var hudBuild = document.getElementById('hudBuild');
+  var progressWrap = document.getElementById('progress');
+  var reduceMotion = false;
+  try{ reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){}
+
+  var BUILD_SELECTOR = '.list-items > li, .axis-bullets > li, .flow2 > li, .tslide-table tbody > tr, .steps3 > .step3-card, .role-cards-dark > .rcard, .tl-strip > .tl-chip';
+
+  /* ---- 8) 표 핵심 행(td.hi) 자동 마킹 : 마크업을 건드리지 않고 JS가 한 번 스캔 ---- */
+  document.querySelectorAll('.tslide-table tbody tr').forEach(function(tr){
+    if(tr.querySelector('td.hi')) tr.classList.add('tr-hi');
+  });
+
+  /* ---- 2) 빌드 모드 상태 ---- */
+  var buildInfo = slides.map(function(slide){
+    if(!slide.hasAttribute('data-build')) return null;
+    var items = Array.prototype.slice.call(slide.querySelectorAll(BUILD_SELECTOR));
+    return { items: items, step: 0 };
+  });
+
+  function renderBuild(i){
+    var info = buildInfo[i];
+    if(!info) return;
+    info.items.forEach(function(el, idx){
+      el.classList.toggle('bd-shown', idx < info.step);
+    });
+  }
+
+  /* ---- 6) 진행 바 : 연속된 같은 data-period를 하나의 세그먼트로 묶음 ---- */
+  var segments = [];
+  slides.forEach(function(s, i){
+    var p = s.dataset.period || '0';
+    var last = segments[segments.length - 1];
+    if(last && last.period === p){ last.count++; last.indices.push(i); }
+    else{ segments.push({ period: p, count: 1, indices: [i] }); }
+  });
+  segments.forEach(function(seg){
+    var el = document.createElement('div');
+    el.className = 'seg seg-p' + seg.period;
+    el.style.flexGrow = seg.count;
+    var fill = document.createElement('div');
+    fill.className = 'seg-fill';
+    el.appendChild(fill);
+    seg._el = el; seg._fill = fill;
+    progressWrap.appendChild(el);
+  });
+
+  function updateProgress(i){
+    segments.forEach(function(seg){
+      var localPos = seg.indices.indexOf(i);
+      if(localPos === -1){
+        var isPast = seg.indices[0] < i;
+        seg._el.classList.toggle('done', isPast);
+        seg._el.classList.remove('cur');
+        seg._fill.style.width = isPast ? '100%' : '0%';
+      } else {
+        seg._el.classList.add('cur');
+        seg._el.classList.remove('done');
+        seg._fill.style.width = (((localPos + 1) / seg.count) * 100) + '%';
+      }
+    });
+  }
+
+  function pad(n){ return String(n).padStart(2, '0'); }
+
   var cur = 0;
 
-  slides.forEach(function(_, i){
-    var d = document.createElement('div');
-    d.className = 'dot';
-    d.addEventListener('click', function(){ go(i); });
-    dotsWrap.appendChild(d);
-  });
-  var dotEls = Array.prototype.slice.call(dotsWrap.children);
-
-  function pad(n){ return String(n).padStart(2,'0'); }
-
-  function go(i){
-    if(i < 0 || i >= slides.length) return;
+  function renderSlide(i){
     cur = i;
     slides.forEach(function(s, idx){ s.classList.toggle('active', idx === cur); });
-    dotEls.forEach(function(d, idx){ d.classList.toggle('active', idx === cur); });
-    hudIdx.textContent = pad(cur+1) + ' / ' + slides.length;
+    hudIdx.textContent = pad(cur + 1) + ' / ' + slides.length;
     var per = slides[cur].dataset.period;
     hudPeriod.textContent = per ? (per + '교시') : '';
+    var info = buildInfo[cur];
+    if(info){
+      hudBuild.textContent = ' · 빌드 ' + info.step + '/' + info.items.length;
+      hudBuild.hidden = false;
+    } else {
+      hudBuild.hidden = true;
+    }
+    renderBuild(cur);
+    updateProgress(cur);
+    playCountUps(slides[cur]);
     try{ sessionStorage.setItem('lcd2-slide', cur); }catch(e){}
   }
 
-  document.getElementById('prevBtn').addEventListener('click', function(){ go(cur-1); });
-  document.getElementById('nextBtn').addEventListener('click', function(){ go(cur+1); });
+  /* Home/End, 점프 이동 : 도착 시 빌드는 항상 "끝까지 공개된" 상태로 보여준다 */
+  function goDirect(i){
+    if(i < 0 || i >= slides.length) return;
+    var info = buildInfo[i];
+    if(info) info.step = info.items.length;
+    renderSlide(i);
+  }
+
+  /* ---- 다음 : 빌드 중이면 한 스텝 공개, 다 됐으면 다음 슬라이드로 ---- */
+  function next(){
+    var info = buildInfo[cur];
+    if(info && info.step < info.items.length){
+      info.step++;
+      renderBuild(cur);
+      hudBuild.textContent = ' · 빌드 ' + info.step + '/' + info.items.length;
+      return;
+    }
+    if(cur + 1 >= slides.length) return;
+    var nInfo = buildInfo[cur + 1];
+    if(nInfo) nInfo.step = 0;
+    renderSlide(cur + 1);
+  }
+
+  /* ---- 이전 : 빌드가 부분 공개 상태면 한 스텝 되돌리고, 0이면 이전 슬라이드의
+     "끝까지 공개된" 상태로 진입 (파워포인트/키노트 방식과 동일한 대칭 모델) ---- */
+  function prev(){
+    var info = buildInfo[cur];
+    if(info && info.step > 0){
+      info.step--;
+      renderBuild(cur);
+      hudBuild.textContent = ' · 빌드 ' + info.step + '/' + info.items.length;
+      return;
+    }
+    if(cur - 1 < 0) return;
+    var pInfo = buildInfo[cur - 1];
+    if(pInfo) pInfo.step = pInfo.items.length;
+    renderSlide(cur - 1);
+  }
+
+  /* ---- 3) 숫자 카운트업 : prefix/suffix, 쉼표, 소수점을 보존한 채 숫자만 보간 ---- */
+  function parseNum(str){
+    var m = str.match(/^([+\-]?)([0-9][0-9,]*(?:\.[0-9]+)?)(.*)$/);
+    if(!m) return null;
+    var sign = m[1], numPart = m[2], suffix = m[3];
+    var hasComma = numPart.indexOf(',') !== -1;
+    var decimals = (numPart.split('.')[1] || '').length;
+    var value = parseFloat(numPart.replace(/,/g, '')) * (sign === '-' ? -1 : 1);
+    return { value: value, decimals: decimals, hasComma: hasComma, suffix: suffix, showPlus: sign === '+' };
+  }
+
+  function formatNum(v, spec){
+    var fixed = Math.abs(v).toFixed(spec.decimals);
+    var parts = fixed.split('.');
+    if(spec.hasComma){ parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+    var out = parts.join('.');
+    if(v < 0) out = '-' + out; else if(spec.showPlus) out = '+' + out;
+    return out + spec.suffix;
+  }
+
+  function animateCount(el){
+    if(!el.dataset.target) el.dataset.target = el.textContent.trim();
+    var spec = parseNum(el.dataset.target);
+    if(!spec) return;
+    if(reduceMotion){ el.textContent = el.dataset.target; return; }
+    if(el._countRAF) cancelAnimationFrame(el._countRAF);
+    var start = performance.now();
+    var dur = 900;
+    function frame(now){
+      var t = Math.min(1, (now - start) / dur);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = formatNum(spec.value * eased, spec);
+      if(t < 1){ el._countRAF = requestAnimationFrame(frame); }
+      else{ el.textContent = el.dataset.target; }
+    }
+    el.textContent = formatNum(0, spec);
+    el._countRAF = requestAnimationFrame(frame);
+  }
+
+  function playCountUps(slide){
+    slide.querySelectorAll('.stat-box .num').forEach(function(el){ animateCount(el); });
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', prev);
+  document.getElementById('nextBtn').addEventListener('click', next);
 
   document.addEventListener('keydown', function(e){
-    if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); go(cur+1); }
-    else if(e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); go(cur-1); }
+    if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); next(); }
+    else if(e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); prev(); }
     else if(e.key === 'f' || e.key === 'F'){ toggleFullscreen(); }
-    else if(e.key === 'Home'){ go(0); }
-    else if(e.key === 'End'){ go(slides.length-1); }
+    else if(e.key === 'Home'){ goDirect(0); }
+    else if(e.key === 'End'){ goDirect(slides.length - 1); }
   });
 
   function toggleFullscreen(){
@@ -1390,8 +1836,11 @@ body{
   document.getElementById('fsBtn').addEventListener('click', toggleFullscreen);
 
   var startAt = 0;
-  try{ startAt = parseInt(sessionStorage.getItem('lcd2-slide'),10) || 0; }catch(e){}
-  go(startAt);
+  try{ startAt = parseInt(sessionStorage.getItem('lcd2-slide'), 10) || 0; }catch(e){}
+  if(startAt < 0 || startAt >= slides.length) startAt = 0;
+  var info0 = buildInfo[startAt];
+  if(info0) info0.step = 0;
+  renderSlide(startAt);
 
 })();
 </script>
