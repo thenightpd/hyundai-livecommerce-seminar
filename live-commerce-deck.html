@@ -1,10 +1,17 @@
 <title>라이브커머스 생태계 발표 슬라이드</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&family=Noto+Serif+KR:wght@500;600&family=Gothic+A1:wght@500;700;900&family=JetBrains+Mono:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&family=Noto+Serif+KR:wght@500;600&family=JetBrains+Mono:wght@500;600;700&display=swap');
+@font-face{
+  font-family:'Pretendard Variable';
+  src:url('_PretendardVariable.woff2') format('woff2-variations'), url('_PretendardVariable.woff2') format('woff2');
+  font-weight:45 920;
+  font-style:normal;
+}
 
 :root{
-  --font-label:'Gothic A1','Noto Sans KR',sans-serif;
+  --font-label:'Pretendard Variable','Noto Sans KR',sans-serif;
+  --font-body:'Pretendard Variable','Noto Sans KR',sans-serif;
   --bg:#0B0904;
   --panel:#171208;
   --panel-2:#1F1810;
@@ -22,7 +29,7 @@
 html,body{margin:0;padding:0;height:100%;}
 body{
   background:var(--bg);color:var(--ink);
-  font-family:'Noto Sans KR',sans-serif;
+  font-family:var(--font-body);
   overflow:hidden;
   -webkit-font-smoothing:antialiased;
   word-break:keep-all;
@@ -86,7 +93,7 @@ body{
   margin-bottom:18px;
 }
 .s-period{
-  font-family:'Noto Sans KR',sans-serif;font-weight:900;
+  font-family:var(--font-body);font-weight:900;
   font-size:clamp(48px,11vw,150px);line-height:.95;letter-spacing:-.02em;
   color:var(--ink);text-wrap:balance;
 }
@@ -102,7 +109,7 @@ body{
 /* ---- keyword slide ---- */
 .kw-eyebrow{
   font-family:var(--font-label);font-weight:700;font-size:clamp(14px,1.6vw,19px);
-  letter-spacing:.04em;color:var(--ink-faint);margin-bottom:22px;
+  letter-spacing:.04em;color:var(--ink);margin-bottom:22px;
 }
 .kw-text{
   font-weight:900;font-size:clamp(30px,5.6vw,72px);line-height:1.32;
@@ -122,7 +129,7 @@ body{
 .axis-bullets{list-style:none;padding:0;margin:0 0 30px;display:flex;flex-direction:column;gap:10px;align-items:center;}
 .axis-bullets li{
   font-size:clamp(16px,1.9vw,22px);color:var(--ink-soft);
-  font-family:'Noto Sans KR',sans-serif;font-weight:500;
+  font-family:var(--font-body);font-weight:500;
 }
 .axis-quote{
   font-family:'Noto Serif KR',serif;font-weight:600;
@@ -186,7 +193,7 @@ body{
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.45;}}
 .timer-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center;margin-bottom:18px;}
 .tbtn{
-  font-family:'Noto Sans KR',sans-serif;font-weight:700;font-size:15px;
+  font-family:var(--font-body);font-weight:700;font-size:15px;
   background:var(--accent);color:#1a0d05;border:none;border-radius:10px;
   padding:12px 26px;cursor:pointer;
 }
@@ -306,9 +313,222 @@ body{
   .mission-grid{grid-template-columns:1fr;}
   .tl-strip{grid-template-columns:repeat(2,1fr);}
 }
+
+/* ---- qr slide ---- */
+.qr-box{background:#fff;padding:22px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-top:8px;}
+.qr-box img{display:block;width:min(280px,50vw);height:auto;}
+
+/* ---- instructor intro ---- */
+.instructor-wrap{display:flex;gap:min(6vw,56px);align-items:center;justify-content:center;max-width:92vw;flex-wrap:wrap;}
+.instructor-photo{width:min(300px,42vw);height:min(380px,52vh);object-fit:cover;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.instructor-info{text-align:left;max-width:480px;}
+.instructor-info h3{margin:0 0 20px;font-size:clamp(24px,3.2vw,38px);font-weight:900;}
+.instructor-info ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:15px;}
+.instructor-info li{font-size:clamp(14px,1.6vw,18px);color:var(--ink-soft);line-height:1.5;}
+.instructor-info li b{color:var(--accent);font-weight:700;}
+
+/* ---- photo slides ---- */
+.ps-caption{margin-top:26px;font-weight:700;font-size:clamp(20px,2.6vw,32px);color:var(--ink);text-wrap:balance;}
+.ps-caption .hl{color:var(--accent);}
+.ps-single{max-height:58vh;max-width:88vw;object-fit:cover;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.photo-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;max-width:92vw;}
+.photo-row img{height:46vh;max-width:44vw;object-fit:cover;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.photo-row.pair2 img{height:42vh;}
+
+/* ---- career timeline ---- */
+.career-timeline{display:flex;align-items:flex-end;gap:5px;width:min(880px,90vw);margin-bottom:0;}
+.career-seg{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.career-seg .seg-job{font-family:var(--font-label);font-size:clamp(11px,1.2vw,14px);font-weight:700;color:var(--ink-soft);height:36px;display:flex;align-items:center;text-align:center;line-height:1.3;}
+.career-seg .seg-bar{width:100%;height:58px;border-radius:8px;}
+.career-seg .seg-year{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.2vw,13px);color:var(--ink-faint);}
 </style>
 
 <div class="deck" id="deck">
+
+  <!-- ================= 1교시 ================= -->
+
+  <!-- 0 : QR 입장코드 -->
+  <section class="slide" data-period="1">
+    <div class="kw-eyebrow">입장 코드</div>
+    <div class="kw-text">오늘 세미나,<br><span class="hl">이 코드로 입장해주세요</span></div>
+    <div class="qr-box"><img src="photos/qr.jpg" alt="입장 QR코드"></div>
+    <div class="mission-sub" style="margin-top:24px;">오늘 교육의 질의응답은,<br>오픈카톡방에서 익명으로도 가능합니다</div>
+  </section>
+
+  <!-- 0b : 강사소개 -->
+  <section class="slide" data-period="1">
+    <div class="instructor-wrap">
+      <img class="instructor-photo" src="photos/instructor.jpg" alt="강사 소개 사진">
+      <div class="instructor-info">
+        <h3>강사 소개</h3>
+        <ul>
+          <li><b>방송 MD (4년)</b> — 상품 소싱, 원가 협상, 방송 편성</li>
+          <li><b>온라인 마케팅 (2년)</b> — 광고 운영, 데이터 기반 캠페인 기획</li>
+          <li><b>쇼핑라이브 편성·기획 (2년)</b> — 라이브 방송 편성과 콘텐츠 기획</li>
+          <li><b>온라인 영업관리 (2년)</b> — 파트너사 정산·협상, 매출 관리</li>
+          <li><b>e커머스 제휴 (3년차)</b> — 신사업 제휴, 채널 확장</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 0b2 : 강사소개 2 (개인사) -->
+  <section class="slide" data-period="1">
+    <div class="instructor-wrap">
+      <img class="instructor-photo" src="photos/instructor2.jpg" alt="강사 가족 사진">
+      <div class="instructor-info">
+        <h3>강사 소개 — 개인사</h3>
+        <ul>
+          <li><b>1987년 11월</b> — 태어남</li>
+          <li><b>2007년 1월</b> — 군대 감 (연천, 25사단)</li>
+          <li><b>2012년 12월</b> — 인턴 시작</li>
+          <li><b>2013년 3월</b> — 공채 입사 (현대홈쇼핑)</li>
+          <li><b>2019년 11월</b> — 결혼함</li>
+          <li><b>2022년 7월</b> — 첫째 건율 탄생</li>
+          <li><b>2024년 4월</b> — 둘째 하윤 탄생</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 0c : 강사의 이야기 -->
+  <section class="slide" data-period="1">
+    <div class="kw-eyebrow">Chapter 1</div>
+    <div class="kw-text">강사의 이야기</div>
+  </section>
+
+  <!-- 0d : 25살, 사진1+2 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row">
+      <img src="photos/story1.jpg" alt="25살 시절 사진 1">
+      <img src="photos/story2.jpg" alt="25살 시절 사진 2">
+    </div>
+    <div class="ps-caption">꿈이 없던 <span class="hl">25살</span>의 모습</div>
+  </section>
+
+  <!-- 0e : 인턴시절, 사진5 -->
+  <section class="slide" data-period="1">
+    <img class="ps-single" src="photos/story5.jpg" alt="인턴사원 입문교육 사진">
+    <div class="ps-caption">우연찮게 시작된 <span class="hl">인턴시절</span></div>
+  </section>
+
+  <!-- 0f : 신입사원, 사진6 -->
+  <section class="slide" data-period="1">
+    <img class="ps-single" src="photos/story6.jpg" alt="신입사원 교육 사진">
+    <div class="ps-caption">우연찮게 시작된 <span class="hl">신입사원</span></div>
+  </section>
+
+  <!-- 0g : 커리어 타임라인 -->
+  <section class="slide" data-period="1">
+    <div class="kw-eyebrow">2013년부터, 지금까지</div>
+    <div class="career-timeline">
+      <div class="career-seg" style="flex:4">
+        <div class="seg-job">방송 MD</div>
+        <div class="seg-bar" style="background:var(--accent)"></div>
+        <div class="seg-year">2013–2016</div>
+      </div>
+      <div class="career-seg" style="flex:2">
+        <div class="seg-job">온라인<br>마케팅</div>
+        <div class="seg-bar" style="background:var(--gold)"></div>
+        <div class="seg-year">2017–2018</div>
+      </div>
+      <div class="career-seg" style="flex:2">
+        <div class="seg-job">쇼핑라이브<br>편성·기획</div>
+        <div class="seg-bar" style="background:#7A6BD9"></div>
+        <div class="seg-year">2019–2020</div>
+      </div>
+      <div class="career-seg" style="flex:2">
+        <div class="seg-job">온라인<br>영업관리</div>
+        <div class="seg-bar" style="background:#3FA687"></div>
+        <div class="seg-year">2021–2022</div>
+      </div>
+      <div class="career-seg" style="flex:3">
+        <div class="seg-job">e커머스<br>제휴</div>
+        <div class="seg-bar" style="background:#D9637A"></div>
+        <div class="seg-year">2023–현재</div>
+      </div>
+    </div>
+    <div class="mission-sub" style="margin-top:26px;">5개 직무, 14년, 1개 회사</div>
+  </section>
+
+  <!-- 0h : 쇼핑라이브 시절 이야기 -->
+  <section class="slide" data-period="1">
+    <div class="kw-eyebrow">Chapter 2</div>
+    <div class="kw-text">쇼핑라이브 시절 이야기</div>
+  </section>
+
+  <!-- 0i : 방송MD 방송화면 + 신입 동기 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p28.jpg" alt="TV홈쇼핑 방송 화면">
+      <img src="photos/p27.jpg" alt="2013년 신입 동기들">
+    </div>
+    <div class="ps-caption">방송 MD 시절, 그리고 <span class="hl">함께한 동기들</span></div>
+  </section>
+
+  <!-- 0j : 파트너사 미팅 + 농장 현장 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p15.jpg" alt="파트너사 미팅">
+      <img src="photos/p09.jpg" alt="농가 현장 작업">
+    </div>
+    <div class="ps-caption">사무실보다 <span class="hl">현장을 더 뛰어다니던 시절</span></div>
+  </section>
+
+  <!-- 0k : 멜론 농장 촬영 + 토마토 라이브 화면 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p14.jpg" alt="멜론 농장 라이브 촬영">
+      <img src="photos/p13.jpg" alt="토마토 라이브 방송 화면">
+    </div>
+    <div class="ps-caption">라이브커머스, <span class="hl">현장의 기록</span></div>
+  </section>
+
+  <!-- 0l : HL사이언스 스튜디오 + PD 콘솔 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p17.jpg" alt="스튜디오 정식 촬영">
+      <img src="photos/p18.jpg" alt="PD 콘솔 데스크">
+    </div>
+    <div class="ps-caption">스튜디오 방송의 <span class="hl">뒷모습</span></div>
+  </section>
+
+  <!-- 0m : 거실 라이브 세팅 + 옥상 디퓨저 라이브 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p10.jpg" alt="가정집 라이브 세팅">
+      <img src="photos/p19.jpg" alt="옥상 라이브 방송">
+    </div>
+    <div class="ps-caption"><span class="hl">장소를 가리지 않았던</span> 라이브</div>
+  </section>
+
+  <!-- 0n : 뷰티 세트 조명 세팅 + 촬영 대기 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p20.jpg" alt="뷰티 세트 조명 세팅">
+      <img src="photos/p23.jpg" alt="촬영 대기 중">
+    </div>
+    <div class="ps-caption">촬영 준비, 그리고 <span class="hl">잠깐의 여유</span></div>
+  </section>
+
+  <!-- 0o : 마사지건 라이브 + 팀 단체사진 -->
+  <section class="slide" data-period="1">
+    <div class="photo-row pair2">
+      <img src="photos/p16.jpg" alt="마사지건 라이브 방송 화면">
+      <img src="photos/p21.jpg" alt="팀 단체사진">
+    </div>
+    <div class="ps-caption">그렇게 <span class="hl">함께 만든 방송들</span></div>
+  </section>
+
+  <!-- 0p : bridge -->
+  <section class="slide" data-period="1">
+    <div class="bridge-eyebrow">쉬는 시간 10분</div>
+    <div class="bridge-num">2교시 · 10:10</div>
+    <div class="bridge-title">과차장급이 좋아하는<br>신입사원의 특징</div>
+    <div class="bridge-sub">"저도 신입이었고, 신입을 뽑아도 봤습니다."</div>
+  </section>
+
+  <!-- ================= 2교시 ================= -->
 
   <!-- 1 -->
   <section class="slide" data-idx="0" data-period="2">
@@ -443,54 +663,32 @@ body{
     </div>
   </section>
 
-  <!-- 8 : mission (20초 배틀) -->
+  <!-- 8 : mission (30초 배틀) -->
   <section class="slide" data-idx="7" data-period="2">
-    <div class="mission-title">20초 배틀</div>
-    <div class="mission-sub">진짜 20초 되면 칼같이 끊깁니다</div>
+    <div class="mission-title">30초 배틀</div>
+    <div class="mission-sub">진짜 30초 되면 칼같이 끊깁니다</div>
     <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
       <li>구조 — 결론 → 이유 → 근거</li>
-      <li>소재 — "나는 왜 이 일을 하고 싶은가" 추천 (자유 주제 가능)</li>
+      <li>주제 — 아래 5개 중 하나를 골라서</li>
       <li>조원 전원이 한 번씩, 조 챔피언 투표로 마무리</li>
     </ul>
   </section>
 
+  <!-- 8b : 30초 배틀 주제 예시 -->
+  <section class="slide" data-period="2">
+    <div class="list-title">오늘의 주제, 5개 중 하나</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
+      <li>나는 왜 이 일을 하고 싶은가</li>
+      <li>최근에 재구매한 물건, 왜 다시 샀나</li>
+      <li>오늘 아침 지각할 뻔한 이유</li>
+      <li>인생 최고의 실패담 하나</li>
+      <li>내가 이 자리에서 제일 잘하는 것 하나</li>
+    </ul>
+    <div class="mission-sub" style="margin-top:26px;">이 중 <span class="hl" style="color:var(--accent);font-weight:700;">하나만 골라서</span> 30초 안에 말해보세요</div>
+  </section>
+
   <!-- 9 : timer 생각하기 -->
-  <section class="slide" data-idx="8" data-period="2">
-    <div class="timer-label">생각하기 · 구조 잡기</div>
-    <div class="timer-ring-wrap" data-timer data-default="180">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">03:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="60">1:00</button>
-      <button class="preset" data-sec="120">2:00</button>
-      <button class="preset" data-sec="180">3:00</button>
-    </div>
-  </section>
-
-  <!-- 10 : timer 20초 배틀 -->
-  <section class="slide" data-idx="9" data-period="2">
-    <div class="timer-label">20초 배틀 · 발표자마다 리셋</div>
-    <div class="timer-ring-wrap" data-timer data-default="20">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">00:20</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="15">0:15</button>
-      <button class="preset" data-sec="20">0:20</button>
-      <button class="preset" data-sec="25">0:25</button>
-      <button class="preset" data-sec="30">0:30</button>
-    </div>
-  </section>
-
+  <!-- 10 : timer 30초 배틀 -->
   <!-- 11 : 챔피언 -->
   <section class="slide" data-idx="10" data-period="2">
     <div class="kw-eyebrow">마무리</div>
@@ -574,6 +772,21 @@ body{
     </table>
   </section>
 
+  <!-- 후킹→CTA 숏폼 구조 -->
+  <section class="slide" data-period="3">
+    <div class="tslide-title">후킹 → CTA, 숏폼 콘텐츠의 구조</div>
+    <table class="tslide-table">
+      <thead><tr><th>구간</th><th>목적</th><th>AARRR과 비교하면</th></tr></thead>
+      <tbody>
+        <tr><td>0–3초 후킹</td><td>스크롤을 멈추게 하기</td><td>Acquisition</td></tr>
+        <tr><td>3–10초 공감·전개</td><td>내 얘기라고 느끼게 하기</td><td>Activation</td></tr>
+        <tr><td>10–20초 가치 제공</td><td>정보·재미·혜택 전달</td><td class="hi">Revenue로 연결</td></tr>
+        <tr><td>20–25초 신뢰 강화</td><td>후기·데이터·비교로 설득</td><td>Retention 만드는 구간</td></tr>
+        <tr><td>25–30초 CTA</td><td>지금 행동하게 만들기</td><td>Referral까지 연결</td></tr>
+      </tbody>
+    </table>
+  </section>
+
   <section class="slide" data-period="3">
     <div class="kw-eyebrow">1,000명이 들어왔다면</div>
     <div class="stat-row">
@@ -592,30 +805,8 @@ body{
   <section class="slide" data-period="3">
     <div class="kw-eyebrow">실습</div>
     <div class="kw-text">유입 <span class="hl">×</span> 전환율 <span class="hl">×</span> 객단가</div>
-    <div class="mission-sub" style="margin-top:20px;">정답이 아니라 — 왜 그 숫자를 가정했는지가 중요합니다</div>
-  </section>
-
-  <section class="slide" data-period="3">
-    <div class="timer-label">매출 계산하기 · 2인 1조</div>
-    <div class="timer-ring-wrap" data-timer data-default="1800">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">30:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="300">5:00</button>
-      <button class="preset" data-sec="600">10:00</button>
-      <button class="preset" data-sec="1200">20:00</button>
-      <button class="preset" data-sec="1800">30:00</button>
-    </div>
-  </section>
-
-  <section class="slide" data-period="3">
-    <div class="tslide-title">막힐 때만 공개하는 힌트</div>
-    <table class="tslide-table">
+    <div class="mission-sub" style="margin-top:16px;">정답이 아니라 — 왜 그 숫자를 가정했는지가 중요합니다</div>
+    <table class="tslide-table" style="margin-top:26px;">
       <tbody>
         <tr><td>전환율</td><td>일반 이커머스 0.3~1%</td><td class="hi">라이브커머스 3~8%</td></tr>
         <tr><td>플랫폼 수수료</td><td>온라인쇼핑몰 약 10%</td><td class="hi">TV홈쇼핑 약 27.7%</td></tr>
@@ -624,45 +815,108 @@ body{
     </table>
   </section>
 
+  <!-- 예제 1 : 청바지 -->
   <section class="slide" data-period="3">
-    <div class="list-title">공유 — 던질 질문</div>
-    <ul class="list-items" style="text-align:left;font-size:clamp(17px,2.1vw,24px);">
-      <li>영업이익 마이너스 나온 팀?</li>
-      <li>제일 높은 이익, 전환율 몇 %로 잡았나</li>
-      <li>효과가 제일 컸던 건 유입? 전환율?</li>
-      <li>그럼 전환율은 누가 올리나 → 여러분</li>
+    <div class="kw-eyebrow">예제 1 · 거꾸로 계산하기</div>
+    <div class="kw-text" style="font-size:clamp(20px,2.8vw,32px);">오늘 <span class="hl">39,000원짜리 청바지</span>를 파는데,<br>목표 매출이 <span class="hl">1,000만원</span>이야</div>
+    <ul class="list-items" style="text-align:left;margin-top:28px;font-size:clamp(16px,1.9vw,21px);">
+      <li>구매전환율이 3%면 몇 명이 유입되어야 하지?</li>
+      <li>그만큼을 유입하려면 무엇을 어떻게 해야 하지?</li>
     </ul>
   </section>
 
   <section class="slide" data-period="3">
-    <div class="kw-eyebrow">우리 회사 얘기 — 현대홈쇼핑</div>
-    <div class="stat-row">
-      <div class="stat-box"><span class="num">5배</span><span class="lbl">5년간 매출 성장</span></div>
-      <div class="stat-arrow">·</div>
-      <div class="stat-box"><span class="num">2~3배</span><span class="lbl">고정 프로그램 회당 매출</span></div>
-    </div>
-    <div class="kw-text" style="margin-top:28px;font-size:clamp(20px,2.6vw,30px);">매번 새 방송이 아니라,<br><span class="hl">기다려지는 방송</span>이 이긴다</div>
-    <div class="source-note">오피니언뉴스 · 경제일보, 2025.3</div>
+    <div class="kw-eyebrow">예제 1 · 정답</div>
+    <ol class="flow2" style="text-align:left;">
+      <li><span class="fnum">1</span><span>1,000만원 ÷ 39,000원 = <b>약 257건</b> 구매 필요</span></li>
+      <li><span class="fnum">2</span><span>257건 ÷ 3% (구매전환율) = <b>약 8,570명</b> 유입 필요</span></li>
+    </ol>
+    <div class="kw-text" style="margin-top:28px;font-size:clamp(19px,2.4vw,26px);">"어떻게 8,570명을 모을까"는<br><span class="hl">정답이 없습니다 — 여기서부터 토론</span></div>
+  </section>
+
+  <!-- 예제 2 : 쿠팡파트너스 -->
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">예제 2 · 순서대로 계산하기</div>
+    <div class="kw-text" style="font-size:clamp(19px,2.6vw,30px);">나는 쓰레드에 쿠팡파트너스 링크를 달아서<br>한 달 <span class="hl">수익 100만원</span>을 벌고 싶어</div>
+    <div class="mission-sub" style="margin-top:18px;">그럼, 본게시물의 한 달 조회수는 몇이 나와야 할까?</div>
+    <table class="tslide-table" style="margin-top:22px;">
+      <tbody>
+        <tr><td>게시물 → 링크 클릭율</td><td class="hi">10%</td></tr>
+        <tr><td>링크 유입자 구매전환율</td><td class="hi">1%</td></tr>
+        <tr><td>평균 객단가</td><td class="hi">30,000원</td></tr>
+        <tr><td>쿠팡파트너스 수수료</td><td class="hi">3%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">예제 2 · 정답</div>
+    <ol class="flow2" style="text-align:left;">
+      <li><span class="fnum">1</span><span>조회수 <b>120만</b> → 클릭율 10% → 클릭 <b>12만명</b></span></li>
+      <li><span class="fnum">2</span><span>구매전환율 1% → 구매 <b>1,200명</b></span></li>
+      <li><span class="fnum">3</span><span>객단가 3만원 → 매출 <b>3,600만원</b></span></li>
+      <li><span class="fnum">4</span><span>수수료 3% → 수익 <b class="role-tag" style="font-size:15px;">약 108만원</b></span></li>
+    </ol>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="list-title">공유 — 우리가 통제 가능한 부분은?</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(17px,2.1vw,24px);">
+      <li>1. 게시물 조회수</li>
+      <li>2. 쿠팡파트너스 링크 게시물 클릭율</li>
+      <li>3. 클릭한 사람들 중 구매전환율</li>
+      <li>4. 객단가</li>
+      <li>5. 수수료율</li>
+    </ul>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="tslide-title">그래서, 통제할 수 있을까?</div>
+    <table class="tslide-table">
+      <tbody>
+        <tr><td>1. 조회수</td><td class="hi">가능 — 영상·글을 잘 쓰면 된다</td></tr>
+        <tr><td>2. 클릭율</td><td class="hi">가능 — 안 눌러보고 배길 수 없는 상품</td></tr>
+        <tr><td>3. 구매전환율</td><td class="hi">가능 — 2번과 같음</td></tr>
+        <tr><td>4. 객단가</td><td class="hi">가능 — 2번과 같음</td></tr>
+        <tr><td>5. 수수료율</td><td>불가능</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">그럼 우리가 집중해야 될 것은?</div>
+    <div class="kw-text">어떤 상품을 고르느냐는 <span class="hl">안목</span><br>그 상품을 어떻게 소개할 것이냐는 <span class="hl">센스</span></div>
+  </section>
+
+  <section class="slide" data-period="3">
+    <div class="kw-eyebrow">마지막 질문</div>
+    <div class="kw-text">그럼 그것들을<br><span class="hl">어떻게 키울 수 있을까?</span></div>
   </section>
 
   <section class="slide" data-period="3">
     <div class="bridge-eyebrow">Next</div>
     <div class="bridge-num">4교시 · 13:20</div>
-    <div class="bridge-title">마케팅이란 무엇?<br>팔리는 구조</div>
-    <div class="bridge-sub">"오늘 오후에 여러분이 할 일이 전부 마케팅입니다."</div>
+    <div class="bridge-title">마케팅이란?</div>
   </section>
 
   <!-- ================= 4교시 ================= -->
   <section class="slide" data-period="4">
     <div class="eyebrow">직무 세미나 · 현직자 특강</div>
     <div class="s-period">4교시</div>
-    <div class="s-title">마케팅이란 무엇? 팔리는 구조</div>
+    <div class="s-title">마케팅이란?</div>
     <div class="s-meta tabular">13:20 – 14:20 &nbsp;·&nbsp; 이론 15분 + 실습 33분 + 공유 7분 + 예고 5분</div>
   </section>
 
   <section class="slide" data-period="4">
     <div class="kw-eyebrow">피터 드러커</div>
     <div class="kw-text">"마케팅의 목표는<br><span class="hl">영업을 불필요하게</span> 만드는 것이다"</div>
+  </section>
+
+  <!-- 저는 이렇게 생각합니다 -->
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">저는 이렇게 생각합니다</div>
+    <div class="kw-text">좋은 상품을 만드는 게 아니라<br><span class="hl">사고 싶게 만드는 구조</span>를 짜는 일</div>
+    <div class="mission-sub" style="margin-top:20px;">감이 아니라 — 가설 → 실행 → 측정 → 재수정의 반복</div>
   </section>
 
   <section class="slide" data-period="4">
@@ -679,6 +933,23 @@ body{
     </ul>
   </section>
 
+  <!-- 즉석 투표 -->
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">즉석 투표 · 손들기</div>
+    <div class="list-title">마케팅에 가장 가까운 것은?</div>
+    <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
+      <li>A. 예쁜 광고 영상을 만드는 일</li>
+      <li>B. 사람들이 스스로 사고 싶게 만드는 구조를 짜는 일</li>
+      <li>C. 무조건 가격을 낮추는 일</li>
+      <li>D. SNS에 자주 올리는 일</li>
+    </ul>
+  </section>
+
+  <section class="slide" data-period="4">
+    <div class="kw-eyebrow">정답은 B</div>
+    <div class="kw-text">나머지는 전부<br><span class="hl">마케팅의 결과물이지, 마케팅 자체가 아닙니다</span></div>
+  </section>
+
   <section class="slide" data-period="4">
     <div class="kw-eyebrow">이거 하나만 기억하세요</div>
     <div class="kw-text">측정하지 않으면<br><span class="hl">개선할 수 없다</span></div>
@@ -687,19 +958,6 @@ body{
   <section class="slide" data-period="4">
     <div class="kw-eyebrow">아마추어 vs 프로</div>
     <div class="kw-text">'잘됐다'는 아마추어<br><span class="hl">'왜 그랬다'</span>는 프로</div>
-  </section>
-
-  <section class="slide" data-period="4">
-    <div class="kw-eyebrow">왜 지금 AI인가</div>
-    <div class="stat-row">
-      <div class="stat-box"><span class="num">20%</span><span class="lbl">콘텐츠기업 생성형AI 활용률</span></div>
-      <div class="stat-arrow">+7.1%p</div>
-    </div>
-    <ul class="list-items" style="margin-top:26px;font-size:clamp(16px,1.8vw,20px);">
-      <li>SK스토아 — AI 쇼호스트 도입</li>
-      <li>현대홈쇼핑 — 3D 쇼호스트 '랑이', 숏폼 자동 제작</li>
-    </ul>
-    <div class="source-note">한국콘텐츠진흥원 / 전자신문, 2025.10</div>
   </section>
 
   <section class="slide" data-period="4">
@@ -715,26 +973,11 @@ body{
     </table>
   </section>
 
+  <!-- 초미니 실습 -->
   <section class="slide" data-period="4">
-    <div class="kw-eyebrow">오늘 하루 종일 강조할 것</div>
-    <div class="kw-text">AI를 쓰는 게 실력이 아니라,<br><span class="hl">다시 시키는 게</span> 실력</div>
-  </section>
-
-  <section class="slide" data-period="4">
-    <div class="timer-label">30초 큐시트 만들기</div>
-    <div class="timer-ring-wrap" data-timer data-default="1200">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">20:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="300">5:00</button>
-      <button class="preset" data-sec="600">10:00</button>
-      <button class="preset" data-sec="1200">20:00</button>
-    </div>
+    <div class="kw-eyebrow">초미니 실습 · 지금 바로</div>
+    <div class="kw-text">나 자신을 상품으로,<br><span class="hl">15초 홍보 문구</span> 써보기</div>
+    <div class="mission-sub" style="margin-top:20px;">다 쓰신 분? 옆 사람에게 바로 말해보세요</div>
   </section>
 
   <section class="slide" data-period="4">
@@ -793,7 +1036,8 @@ body{
       <div class="tl-chip"><div class="tl-time">14:30</div><div class="tl-label">미션 확인</div></div>
       <div class="tl-chip"><div class="tl-time">14:35</div><div class="tl-label">상품 선택</div></div>
       <div class="tl-chip"><div class="tl-time">14:40</div><div class="tl-label">기획 25분</div></div>
-      <div class="tl-chip"><div class="tl-time">15:05</div><div class="tl-label">휴식 10분</div></div>
+      <div class="tl-chip"><div class="tl-time">15:05</div><div class="tl-label">동료 피드백 5분</div></div>
+      <div class="tl-chip"><div class="tl-time">15:10</div><div class="tl-label">휴식 5분</div></div>
       <div class="tl-chip"><div class="tl-time">15:15</div><div class="tl-label">큐시트 30분</div></div>
       <div class="tl-chip"><div class="tl-time">15:45</div><div class="tl-label">리허설·촬영</div></div>
       <div class="tl-chip"><div class="tl-time">16:05</div><div class="tl-label">발표 20분</div></div>
@@ -819,37 +1063,11 @@ body{
     </ul>
   </section>
 
+  <!-- 동료 피드백 -->
   <section class="slide" data-period="5">
-    <div class="timer-label">기획 25분</div>
-    <div class="timer-ring-wrap" data-timer data-default="1500">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">25:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="600">10:00</button>
-      <button class="preset" data-sec="900">15:00</button>
-      <button class="preset" data-sec="1500">25:00</button>
-    </div>
-  </section>
-
-  <section class="slide" data-period="5">
-    <div class="timer-label">휴식</div>
-    <div class="timer-ring-wrap" data-timer data-default="600">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">10:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="300">5:00</button>
-      <button class="preset" data-sec="600">10:00</button>
-    </div>
+    <div class="kw-eyebrow">중간 점검 · 동료 피드백</div>
+    <div class="kw-text">옆 조와 기획서 교환,<br><span class="hl">1분 안에 냉정하게</span></div>
+    <div class="mission-sub" style="margin-top:20px;">"이거 3초 안에 후킹 안 될 것 같은데?" — 솔직하게</div>
   </section>
 
   <section class="slide" data-period="5">
@@ -858,23 +1076,6 @@ body{
       <div class="step3-card"><div class="s3-num">STEP 1</div><h4>생성</h4><p>기획서 → 60초 큐시트 표로</p></div>
       <div class="step3-card"><div class="s3-num">STEP 2</div><h4>압축</h4><p>소리 내 읽어 60초 안으로</p></div>
       <div class="step3-card"><div class="s3-num">STEP 3</div><h4>현실화</h4><p>소품 없이, 20대 말투로</p></div>
-    </div>
-  </section>
-
-  <section class="slide" data-period="5">
-    <div class="timer-label">큐시트 제작 30분</div>
-    <div class="timer-ring-wrap" data-timer data-default="1800">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">30:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="600">10:00</button>
-      <button class="preset" data-sec="1200">20:00</button>
-      <button class="preset" data-sec="1800">30:00</button>
     </div>
   </section>
 
@@ -909,39 +1110,6 @@ body{
   </section>
 
   <section class="slide" data-period="6">
-    <div class="timer-label">리허설 15분</div>
-    <div class="timer-ring-wrap" data-timer data-default="900">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">15:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="300">5:00</button>
-      <button class="preset" data-sec="600">10:00</button>
-      <button class="preset" data-sec="900">15:00</button>
-    </div>
-  </section>
-
-  <section class="slide" data-period="6">
-    <div class="timer-label">촬영 · 1테이크</div>
-    <div class="timer-ring-wrap" data-timer data-default="300">
-      <svg viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="92"/><circle class="bar" cx="100" cy="100" r="92"/></svg>
-      <div class="timer-display tabular">05:00</div>
-    </div>
-    <div class="timer-controls">
-      <button class="tbtn" data-act="toggle">시작</button>
-      <button class="tbtn secondary" data-act="reset">리셋</button>
-    </div>
-    <div class="presets">
-      <button class="preset" data-sec="180">3:00</button>
-      <button class="preset" data-sec="300">5:00</button>
-    </div>
-  </section>
-
-  <section class="slide" data-period="6">
     <div class="list-title">조당 발표 순서</div>
     <ul class="list-items" style="text-align:left;font-size:clamp(16px,1.9vw,22px);">
       <li>30초 — 기획서 요약</li>
@@ -950,6 +1118,13 @@ body{
       <li>60초 — 강사 피드백</li>
       <li>30초 — 다음 조 세팅</li>
     </ul>
+  </section>
+
+  <!-- 관객 투표 -->
+  <section class="slide" data-period="6">
+    <div class="kw-eyebrow">발표가 끝나면</div>
+    <div class="kw-text">이제, <span class="hl">우리가 심사위원</span></div>
+    <div class="mission-sub" style="margin-top:20px;">손가락 1~5개로 바로 점수 매기기</div>
   </section>
 
   <section class="slide" data-period="6">
@@ -970,6 +1145,7 @@ body{
         <tr><td>AI 활용</td><td class="hi">15점</td><td>몇 번 고쳐 물었나</td></tr>
       </tbody>
     </table>
+    <div class="source-note">여기에 관객(다른 조) 점수도 참고로 반영됩니다</div>
   </section>
 
   <section class="slide" data-period="6">
